@@ -50,7 +50,7 @@ class RunManifest:
     config_hash: str
     data: tuple[DataFingerprint, ...] = ()
     params: dict[str, object] = field(default_factory=dict)
-    env: dict[str, str] = field(default_factory=dict)
+    env: dict[str, object] = field(default_factory=dict)
     stages: tuple[StageRecord, ...] = ()
     manifest_version: str = MANIFEST_VERSION
     git_branch: str | None = None

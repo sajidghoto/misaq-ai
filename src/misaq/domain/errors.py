@@ -10,8 +10,9 @@ class DataValidationError(MisaqError):
     """A data-quality gate failed. The pipeline must stop."""
 
     def __init__(self, message: str, failures: list[str] | None = None):
-        super().__init__(message)
         self.failures = failures or []
+        detail = f": {'; '.join(self.failures)}" if self.failures else ""
+        super().__init__(message + detail)
 
 
 class RetrievalError(MisaqError):

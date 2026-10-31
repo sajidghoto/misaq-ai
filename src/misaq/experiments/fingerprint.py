@@ -42,12 +42,12 @@ def config_sha256(config: Any) -> str:
     return hashlib.sha256(canonical_json(config).encode("utf-8")).hexdigest()
 
 
-def environment_fingerprint() -> dict[str, str]:
+def environment_fingerprint() -> dict[str, object]:
     try:
         import psutil
-        ram = str(psutil.virtual_memory().total)
+        ram = int(psutil.virtual_memory().total)
     except ImportError:
-        ram = "unavailable"
+        ram = 0
     packages = sorted(
         f"{distribution.metadata['Name']}=={distribution.version}"
         for distribution in importlib.metadata.distributions()

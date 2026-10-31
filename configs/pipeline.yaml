@@ -1,4 +1,21 @@
 language: en
+verification:
+  range_cap: 50
+  aliases:
+    - act: CA1872
+      names: ["CA1872", "Contract Act", "Contract Act, 1872", "the Contract Act, 1872"]
+      verified: true
+    - act: CA1872
+      names: ["Act IX of 1872"]
+      verified: false
+    - act: SGA1930
+      names: ["SGA1930", "Sale of Goods Act", "Sale of Goods Act, 1930", "the Sale of Goods Act, 1930"]
+      verified: true
+    - act: SRA1877
+      names: ["SRA1877", "Specific Relief Act", "Specific Relief Act, 1877", "the Specific Relief Act, 1877"]
+      verified: true
+retrieval:
+  top_n: 20
 reference_tokenizer:
   model: BAAI/bge-small-en-v1.5
   revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a

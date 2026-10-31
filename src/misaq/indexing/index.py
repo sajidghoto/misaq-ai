@@ -14,6 +14,8 @@ from misaq.domain.index import IndexMeta
 
 
 class Index(Protocol):
+    chunks: list[Chunk]
+
     def search(self, queries: np.ndarray, k: int) -> tuple[np.ndarray, np.ndarray]:
         ...
 
