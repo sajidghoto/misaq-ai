@@ -24,3 +24,12 @@ setting, CPU batch size, and device. Query and document encoding are separate op
 `IndexMeta` records index identity, backend, processed-statute hashes, chunking/model specs, and
 counts: indexed chunks, excluded repealed section records, and omitted-range section numbers.
 Build throughput, elapsed time, and peak memory are stored separately in `build_report.json`.
+
+## Experiment manifests
+
+`runs/<run_id>/manifest.json` records the run name and time-derived ID, canonical resolved-config
+SHA-256, categorized input fingerprints, model identifiers and revisions, parameters, seed, stages
+with item/failure counts, output fingerprints, Git commit/branch/dirty/availability, and the
+execution environment. Environment package identity is a sorted `name==version` list hash from
+`importlib.metadata`, used as the reproducible stand-in for `pip freeze`. The resolved configuration
+is stored as UTF-8 `resolved_config.yaml`; manifest writes are atomic and use stable key order.

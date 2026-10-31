@@ -1,3 +1,3 @@
-Updated: 2026-10-31 — Step 4 done; algorithm version 2, exact section-aware budgeting, CLI, and no-truncation validation verified.
-Step 4 decisions: English-only exact FAISS flat inner-product search on normalized CPU vectors; protected data unchanged; Qwen query_prefix remains unverified.
-Evidence: indexes a9c430c672eaac3a/e8bd74b651abb2f9 (section/fixed), 357/427 chunks; repeated FAISS hashes match; ruff/mypy pass; full pytest 122 passed; `make` unavailable on Windows, equivalent `pytest -m "not slow"` passed.
+Updated: 2026-10-31 — Step 5 audit closed; manifest/fingerprint library and tests complete, protected data and runner/registry untouched.
+Step 5 audit: all listed requirements have tests; manifest paths are normalized to relative paths and temporary sample inspection found no sensitive/path leakage.
+Evidence: ruff src/tests/scripts pass; mypy src/tests/scripts pass (57 files); full pytest pass (133 tests).
