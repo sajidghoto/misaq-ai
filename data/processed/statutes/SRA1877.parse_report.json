@@ -1,0 +1,19 @@
+{
+ "act": "SRA1877",
+ "ok": true,
+ "toc_entries": 51,
+ "parsed_sections": 51,
+ "failures": [],
+ "title_mismatches": [],
+ "empty_sections": [],
+ "sequence_gaps_unexplained": [],
+ "accepted_not_in_contents": [],
+ "hyphen_linebreaks": 0,
+ "review_items": [
+  {
+   "page": 31,
+   "line": "Subs. by the Federal Laws (Revision and Declaration) Ordinan",
+   "reason": "footnote marker printed as a letter, read as 1"
+  }
+ ]
+}

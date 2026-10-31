@@ -1,0 +1,335 @@
+{
+  "_note": "Hand-checked against the statute PDFs (page numbers are PDF pages). Never regenerate from parser output.",
+  "cases": [
+    {
+      "act": "SGA1930",
+      "number": "4",
+      "title": "Sale and agreement to sell",
+      "chapter": "CHAPTER II",
+      "pages": [
+        6
+      ],
+      "contains": [
+        "agreement to sell becomes a sale when the time elapses"
+      ]
+    },
+    {
+      "act": "SGA1930",
+      "number": "16A",
+      "title": "Seller to inform buyer of defect in goods sold",
+      "pages": [
+        9
+      ],
+      "contains": [
+        "obligation to inform the buyer of any defect"
+      ],
+      "footnote_contains": [
+        "XVIII OF 1994"
+      ]
+    },
+    {
+      "act": "SGA1930",
+      "number": "22",
+      "pages": [
+        10
+      ],
+      "title": "Specific goods in a deliverable state, when the seller has to do anything thereto in order to ascertain price"
+    },
+    {
+      "act": "SGA1930",
+      "number": "26",
+      "pages": [
+        11
+      ],
+      "block_types_include": {
+        "proviso": 2
+      },
+      "footnote_count": 0
+    },
+    {
+      "act": "SGA1930",
+      "number": "58",
+      "pages": [
+        17
+      ],
+      "contains": [
+        "Chapter II of the Specific Relief Act"
+      ]
+    },
+    {
+      "act": "SGA1930",
+      "number": "64A",
+      "pages": [
+        19
+      ],
+      "block_types_include": {
+        "explanation": 1
+      },
+      "contains": [
+        "Sales Tax Act, 1951"
+      ]
+    },
+    {
+      "act": "SGA1930",
+      "number": "65",
+      "status": "repealed",
+      "no_blocks": true
+    },
+    {
+      "act": "SRA1877",
+      "number": "2",
+      "status": "repealed"
+    },
+    {
+      "act": "SRA1877",
+      "number": "9",
+      "pages": [
+        7,
+        8
+      ],
+      "title_startswith": "Suit by person dispossessed of immoveable property",
+      "contains": [
+        "notwithstanding any other title",
+        "No appeal shall lie"
+      ],
+      "chapter": "PART II, CHAPTER I"
+    },
+    {
+      "act": "SRA1877",
+      "number": "27A",
+      "pages": [
+        23,
+        24
+      ],
+      "block_types_include": {
+        "proviso": 1
+      },
+      "title_startswith": "Specific performance in case of part performance of contract to lease"
+    },
+    {
+      "act": "SRA1877",
+      "number": "42",
+      "pages": [
+        28
+      ],
+      "contains": [
+        "within six months"
+      ],
+      "footnote_contains": [
+        "XXXIII of 2023"
+      ]
+    },
+    {
+      "act": "CA1872",
+      "number": "2",
+      "pages": [
+        11,
+        12
+      ],
+      "contains": [
+        "is said to be void"
+      ]
+    },
+    {
+      "act": "CA1872",
+      "number": "4",
+      "pages": [
+        12,
+        13
+      ],
+      "title": "Communication when complete",
+      "block_types_include": {
+        "illustration": 1
+      },
+      "contains": [
+        "A proposes, by letter, to sell a house to B"
+      ]
+    },
+    {
+      "act": "CA1872",
+      "number": "10",
+      "title": "What agreements are contracts",
+      "chapter": "CHAPTER II",
+      "contains": [
+        "free consent of"
+      ]
+    },
+    {
+      "act": "CA1872",
+      "number": "19A",
+      "title": "Power to set aside contract induced by undue influence"
+    },
+    {
+      "act": "CA1872",
+      "number": "25",
+      "title_startswith": "Agreement without consideration void, unless it is in writing",
+      "title_endswith": "debt barred by limitation law"
+    },
+    {
+      "act": "CA1872",
+      "number": "73",
+      "title": "Compensation for loss or damage caused by breach of contract",
+      "chapter": "CHAPTER VI",
+      "contains": [
+        "naturally arose"
+      ],
+      "block_types_include": {
+        "explanation": 1
+      }
+    },
+    {
+      "act": "CA1872",
+      "number": "141",
+      "flags": [
+        "not_in_contents"
+      ],
+      "title": "Surety’s right to benefit of creditor’s securities"
+    },
+    {
+      "act": "SGA1930",
+      "number": "1",
+      "footnote_count": 2,
+      "footnote_contains": [
+        "Federal Laws (Revision and Declaration) Act, 1951"
+      ]
+    },
+    {
+      "act": "SGA1930",
+      "number": "2",
+      "footnote_count": 1,
+      "footnote_contains": [
+        "XLVII OF 1962, s. 2"
+      ]
+    },
+    {
+      "act": "SGA1930",
+      "number": "13",
+      "footnote_count": 1,
+      "footnote_contains": [
+        "Omitted by Ordinance No. XLVII OF 1962, s.3"
+      ]
+    },
+    {
+      "act": "SGA1930",
+      "number": "16",
+      "footnote_count": 0
+    },
+    {
+      "act": "SGA1930",
+      "number": "25",
+      "footnote_count": 2
+    },
+    {
+      "act": "SGA1930",
+      "number": "37",
+      "footnote_count": 1,
+      "footnote_contains": [
+        "XVIII OF 1994, s. 3"
+      ]
+    },
+    {
+      "act": "SGA1930",
+      "number": "40",
+      "footnote_count": 0
+    },
+    {
+      "act": "SGA1930",
+      "number": "66",
+      "text_not_contains": [
+        "_____"
+      ],
+      "status": "in_force"
+    },
+    {
+      "act": "SRA1877",
+      "number": "11",
+      "text_not_contains": [
+        "Contracts which may be specifically enforced",
+        "CHAPTER II"
+      ]
+    },
+    {
+      "act": "SRA1877",
+      "number": "12",
+      "subheading": "(a) Contracts which may be specifically enforced"
+    },
+    {
+      "act": "SRA1877",
+      "number": "44",
+      "text_not_contains": [
+        "Enforcement of Public Duties",
+        "Revision and Declaration"
+      ]
+    },
+    {
+      "act": "CA1872",
+      "number": "75",
+      "text_not_contains": [
+        "[*",
+        "*]",
+        "Date:"
+      ]
+    },
+    {
+      "act": "CA1872",
+      "number": "238",
+      "text_not_contains": [
+        "[*",
+        "*]",
+        "Date:"
+      ]
+    },
+    {
+      "act": "CA1872",
+      "number": "3",
+      "contains": [
+        "respectively"
+      ],
+      "text_not_contains": [
+        "res-",
+        "- pectively"
+      ]
+    },
+    {
+      "act": "CA1872",
+      "number": "20",
+      "contains": [
+        "subject-matter"
+      ]
+    },
+    {
+      "act": "CA1872",
+      "number": "67",
+      "contains": [
+        "non-performance"
+      ]
+    }
+  ],
+  "absent_numbers": {
+    "SRA1877": [
+      "46"
+    ],
+    "CA1872": [
+      "80"
+    ]
+  },
+  "omitted_ranges": {
+    "SRA1877": [
+      [
+        45,
+        51
+      ]
+    ],
+    "CA1872": [
+      [
+        76,
+        123
+      ],
+      [
+        239,
+        266
+      ]
+    ],
+    "SGA1930": []
+  }
+}

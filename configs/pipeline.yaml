@@ -1,0 +1,69 @@
+language: en
+reference_tokenizer:
+  model: BAAI/bge-small-en-v1.5
+  revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
+  max_seq_length: 512
+
+chunking:
+  section_aware:
+    strategy: section_aware
+    algorithm_version: "2"
+    max_tokens: 400
+    overlap_tokens: 0
+    header_prefix: true
+  fixed_size:
+    strategy: fixed_size
+    algorithm_version: "2"
+    max_tokens: 256
+    overlap_tokens: 32
+    header_prefix: true
+
+models:
+  bge-small-en-v1.5:
+    hf_id: BAAI/bge-small-en-v1.5
+    revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
+    dimension: 384
+    max_seq_length: 512
+    normalize: true
+    query_prefix: "Represent this sentence for searching relevant passages: "
+    document_prefix: ""
+    pooling: cls
+    trust_remote_code: false
+    batch_size: 16
+    device: cpu
+  Qwen3-Embedding-0.6B:
+    hf_id: Qwen/Qwen3-Embedding-0.6B
+    revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+    dimension: 1024
+    max_seq_length: 32768
+    normalize: true
+    query_prefix: unverified
+    document_prefix: ""
+    pooling: last_token
+    trust_remote_code: false
+    batch_size: 4
+    device: cpu
+  bge-m3:
+    hf_id: BAAI/bge-m3
+    revision: 5617a9f61b028005a4858fdac845db406aefb181
+    dimension: 1024
+    max_seq_length: 8192
+    normalize: true
+    query_prefix: ""
+    document_prefix: ""
+    pooling: cls
+    trust_remote_code: false
+    batch_size: 4
+    device: cpu
+  nomic-embed-text-v1.5:
+    hf_id: nomic-ai/nomic-embed-text-v1.5
+    revision: e9b6763023c676ca8431644204f50c2b100d9aab
+    dimension: 768
+    max_seq_length: 8192
+    normalize: true
+    query_prefix: "search_query: "
+    document_prefix: "search_document: "
+    pooling: mean
+    trust_remote_code: true
+    batch_size: 8
+    device: cpu

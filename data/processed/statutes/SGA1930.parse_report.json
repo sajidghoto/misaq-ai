@@ -1,0 +1,24 @@
+{
+ "act": "SGA1930",
+ "ok": true,
+ "toc_entries": 68,
+ "parsed_sections": 68,
+ "failures": [],
+ "title_mismatches": [
+  [
+   "36",
+   "Rules as to delivery",
+   "Rule as to delivery."
+  ],
+  [
+   "38",
+   "Instalment deliveries",
+   "Installment deliveries."
+  ]
+ ],
+ "empty_sections": [],
+ "sequence_gaps_unexplained": [],
+ "accepted_not_in_contents": [],
+ "hyphen_linebreaks": 0,
+ "review_items": []
+}

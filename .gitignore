@@ -1,0 +1,56 @@
+# --- Secrets and local config ---
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# --- Tool caches and reports ---
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.hypothesis/
+.coverage
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+
+# --- Data: regenerated stage outputs ---
+# data/raw/, data/processed/statutes/ and data/eval/ stay tracked (hash-pinned).
+data/interim/
+
+# --- Data: indexes are rebuilt from frozen statutes; keep only the metadata ---
+data/index/*/*
+!data/index/*/index_meta.json
+
+# --- Models (large, referenced by path and hash in configs and manifests) ---
+*.gguf
+*.safetensors
+*.bin
+
+# --- Runs: commit only the small, reviewable files ---
+runs/*/*
+!runs/*/manifest.json
+!runs/*/resolved_config.yaml
+!runs/*/summary.json
+
+# --- Editor and OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Scratch ---
+tmp/
+scratch/
+
+
+!data/index/*/build_report.json

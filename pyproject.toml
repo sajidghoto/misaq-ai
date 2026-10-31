@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "misaq"
+version = "0.1.0"
+description = "Misaq AI: statute-grounded contract-clause analysis (Sukkur IBA FYP 23F-50)"
+requires-python = ">=3.10"
+dependencies = ["pymupdf>=1.24", "PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.5", "mypy>=1.10"]
+embed = ["sentence-transformers>=3.0", "faiss-cpu>=1.8", "numpy>=1.26", "psutil>=5.9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "unit: pure functions, no I/O",
+  "contract: domain schema stability",
+  "golden: parsed output vs hand-checked fixtures",
+  "integration: needs the real statute PDFs",
+  "slow: tests requiring extended runtime",
+]
+
+[tool.ruff]
+line-length = 120
+src = ["src", "tests"]
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "E722"]   # E722: no bare except
+
+[tool.mypy]
+ignore_missing_imports = true

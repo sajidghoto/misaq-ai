@@ -1,0 +1,1985 @@
+{
+ "schema_version": "1.1",
+ "code": "SGA1930",
+ "source_file": "PK-SGA1930_service.pdf",
+ "source_sha256": "ac89374529aa0d4929fa1feb5fefc6106c0513187dfde2d8b05ce9042e2a5fd8",
+ "omitted_ranges": [],
+ "notes": [
+  {
+   "page": 5,
+   "marker": "1",
+   "text": "This Act has been applied to Phulera in the Excluded Area of Upper Tanawal to the extend the Act is applicable in the N.-W. F.P., subject to certain modifications, and also extended to the Excluded Area of Upper Tanawal (N.-W. F. P.) other than Phulera with effect from such date and subject to such modifications as may be notified, see N.-W. F. P. (Upper Tanawal) (Excluded Area) Laws Regulations, 1950. This Act also extended to the Leased Areas of Baluchistan, see the Leased Areas (Laws) Order, G. G. O. III of 1950 ; and applied in the Federated Areas of Baluchistan, see Gazette of India, 1937, Pt. I, p. 1499."
+  }
+ ],
+ "sections": [
+  {
+   "id": "SGA1930:s1",
+   "act": "SGA1930",
+   "number": "1",
+   "title": "Short title, extent and commencement",
+   "title_in_body": "Short title, extent and commencement",
+   "chapter": "CHAPTER I",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    5
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1)This Act may be called the [*]Sale of Goods\nAct, 1930.\n[(2) It extends to the whole of Pakistan.]"
+    },
+    {
+     "type": "body",
+     "text": "(3) It shall come into force on the first day of July, 1930."
+    }
+   ],
+   "footnotes": [
+    {
+     "page": 5,
+     "marker": "2",
+     "text": "Repealed by the Federal Laws (Revision and Declaration) Act, 1951(Act No. XXVI OF 1951), s.3 and 2nd Sch."
+    },
+    {
+     "page": 5,
+     "marker": "3",
+     "text": "Subs. by Central Laws (Statute Reform) Ordinance, 1960 (Ordinance No. XXI OF 1960), s.3 and 2nd Sch. (w. e. f. the 14th October, 1955)."
+    }
+   ],
+   "flags": [],
+   "footnote_refs": [
+    {
+     "page": 5,
+     "marker": "2"
+    },
+    {
+     "page": 5,
+     "marker": "3"
+    }
+   ]
+  },
+  {
+   "id": "SGA1930:s2",
+   "act": "SGA1930",
+   "number": "2",
+   "title": "Definitions",
+   "title_in_body": "Definitions.",
+   "chapter": "CHAPTER I",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    5,
+    6
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "In this Act, unless there is anything repugnant in the subject or context,"
+    },
+    {
+     "type": "body",
+     "text": "(1) “buyer” means a person who buys or agrees to buy goods;"
+    },
+    {
+     "type": "body",
+     "text": "(2) “delivery” means voluntary transfer of possession from one person to another ;"
+    },
+    {
+     "type": "body",
+     "text": "(3)  goods are said to be in a “deliverable state” when they are in such state that the buyer would\nunder the contract be bound to take delivery of them ;"
+    },
+    {
+     "type": "body",
+     "text": "(4) “document of title to goods” includes a bill of lading, dock-warrant, warehouse keeper’s\ncertificate, wharfingers’ certificate, railway receipt, warrant or order for the delivery of goods and any\nother document used in the ordinary course of business as proof of the possession or control of goods,\nor authorising or purporting to authorise, either by endorsement or by delivery, the possessor of the\ndocument to transfer or receive goods thereby represented ;"
+    },
+    {
+     "type": "body",
+     "text": "(5) “fault” means wrongful act or default ;"
+    },
+    {
+     "type": "body",
+     "text": "(6) “future goods” means goods to be manufactured or produced or acquired by the seller after\nthe making of the contract of sale;"
+    },
+    {
+     "type": "body",
+     "text": "(7) “goods” means every kind of moveable property other than actionable claims and money ;\nand includes [electricity, water, gas,] stock and shares, growing crops, grass and things attached to or\nforming part of the land which are agreed to be served before sale or under the contract of sale;"
+    },
+    {
+     "type": "body",
+     "text": "(8) a person is said to be “insolvent” who has ceased to pay his debts in the ordinary course of\nbusiness, or cannot pay his debts as they become due, whether he has committed an act of insolvency\nor not ;"
+    },
+    {
+     "type": "body",
+     "text": "(9) “mercantile agent” means a mercantile agent having in the customary course of business as\nsuch agent authority either to sell goods, or to consign goods for the purposes of sale, or to buy goods,\nor to raise money on the security of goods ;"
+    },
+    {
+     "type": "body",
+     "text": "(10) “price” means the money consideration for a sale of goods ;"
+    },
+    {
+     "type": "body",
+     "text": "(11) “property” means the general property in goods, and not merely a special property ;"
+    },
+    {
+     "type": "body",
+     "text": "(12) “quality of goods” includes their state or condition ;"
+    },
+    {
+     "type": "body",
+     "text": "(13) “seller” means a person who sells or agrees to sell goods;"
+    },
+    {
+     "type": "body",
+     "text": "(14) “specific goods” means goods identified and agreed upon at the time a contract of sale is\nmade ; and"
+    },
+    {
+     "type": "body",
+     "text": "(15) expressions used but not defined in this Act and defined in the Contract Act, 1872, (IX of\n1872), have the meanings assigned to them in that Act."
+    }
+   ],
+   "footnotes": [
+    {
+     "page": 5,
+     "marker": "4",
+     "text": "Ins. by Ordinance No. XLVII OF 1962, s. 2."
+    }
+   ],
+   "flags": [],
+   "footnote_refs": [
+    {
+     "page": 5,
+     "marker": "4"
+    }
+   ]
+  },
+  {
+   "id": "SGA1930:s3",
+   "act": "SGA1930",
+   "number": "3",
+   "title": "Application of provisions of Act IX of 1872",
+   "title_in_body": "Application of provisions of Act IX of 1872.",
+   "chapter": "CHAPTER I",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    6
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "The unrepealed provisions of the Contract\nAct, 1872, save in so far as they are inconsistent with the express provisions of this Act, shall continue\nto apply to contracts for the sale of goods."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s4",
+   "act": "SGA1930",
+   "number": "4",
+   "title": "Sale and agreement to sell",
+   "title_in_body": "Sale and agreement to sell.",
+   "chapter": "CHAPTER II",
+   "subheading": "Contract of Sale",
+   "status": "in_force",
+   "pages": [
+    6
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) A contract of sale of goods is a contract whereby the seller\ntransfers or agrees to transfer the property in goods to the buyer for a price. There may be a contract\nof sale between one part-owner and another."
+    },
+    {
+     "type": "body",
+     "text": "(2) A contract of sale may be absolute or conditional."
+    },
+    {
+     "type": "body",
+     "text": "(3) Where under a contract of sale the property in the goods is transferred from the seller to the\nbuyer, the contract is called a sale, but where the transfer of the property in the goods is to take place\nat a future time or subject to some condition thereafter to be fulfilled, the contract is called an agreement\nto sell."
+    },
+    {
+     "type": "body",
+     "text": "(4) An agreement to sell becomes a sale when the time elapses or the conditions are fulfilled\nsubject to which the property in the goods is to be transferred."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s5",
+   "act": "SGA1930",
+   "number": "5",
+   "title": "Contract of sale how made",
+   "title_in_body": "Contract of sale how made.",
+   "chapter": "CHAPTER II",
+   "subheading": "Formalities of the Contract",
+   "status": "in_force",
+   "pages": [
+    6,
+    7
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) A contract of sale is made by an offer to buy or sell goods\nfor a price and the acceptance of such offer. The contract may provide for the immediate delivery of\nthe goods or immediate payment of the price or both, or for the delivery or payment by instalments, or\nthat the delivery or payment or both shall be postponed."
+    },
+    {
+     "type": "body",
+     "text": "(2) Subject to the provisions of any law for the time being in force, a contract of sale may be\nmade in writing or by word of mouth, or partly in writing and partly by word of mouth or may be\nimplied from the conduct of the parties."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s6",
+   "act": "SGA1930",
+   "number": "6",
+   "title": "Existing or future goods",
+   "title_in_body": "Existing or future goods.—",
+   "chapter": "CHAPTER II",
+   "subheading": "Subject-matter of Contract",
+   "status": "in_force",
+   "pages": [
+    7
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) The goods which form the subject of a contract of sale may\nbe either existing goods, owned or possessed by the seller, or future goods."
+    },
+    {
+     "type": "body",
+     "text": "(2) There may be a contract for the sale of goods the acquisition of which by the seller depends\nupon a contingency which may or may not happen."
+    },
+    {
+     "type": "body",
+     "text": "(3) Where by a contract of sale the seller purports to effect a present sale of future goods, the\ncontract operates as an agreement to sell the goods."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s7",
+   "act": "SGA1930",
+   "number": "7",
+   "title": "Goods perishing before making of contract",
+   "title_in_body": "Goods perishing before making of contract.",
+   "chapter": "CHAPTER II",
+   "subheading": "Subject-matter of Contract",
+   "status": "in_force",
+   "pages": [
+    7
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where there is a contract for the sale of\nspecific goods, the contract is void if the goods without the knowledge of the seller have, at the time\nwhen the contract was made, perished or become so damaged as no longer to answer to their description\nin the contract."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s8",
+   "act": "SGA1930",
+   "number": "8",
+   "title": "Goods perishing before sale but after agreement to sell",
+   "title_in_body": "Goods perishing before sale but after agreement to sell.",
+   "chapter": "CHAPTER II",
+   "subheading": "Subject-matter of Contract",
+   "status": "in_force",
+   "pages": [
+    7
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where there is an agreement to\nsell specific goods, and subsequently the goods without any fault on the part of the seller or buyer\nperish or become so damaged as no longer to answer to their description in the agreement before the\nrisk passes to the buyer, the agreement is thereby avoided."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s9",
+   "act": "SGA1930",
+   "number": "9",
+   "title": "Ascertainment of price",
+   "title_in_body": "Ascertainment of Price.",
+   "chapter": "CHAPTER II",
+   "subheading": "The Price",
+   "status": "in_force",
+   "pages": [
+    7
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) The price in a contract of sale may be fixed by the contract\nor may be left to be fixed in manner thereby agreed or may be determined by the course of dealing\nbetween the parties."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where the price is not determined in accordance with the foregoing provisions, the buyer\nshall pay the seller a reasonable price. What is a reasonable price is a question of fact dependent on the\ncircumstances of each particular case."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s10",
+   "act": "SGA1930",
+   "number": "10",
+   "title": "Agreement to sell at valuation",
+   "title_in_body": "Agreement to sell at valuation.",
+   "chapter": "CHAPTER II",
+   "subheading": "The Price",
+   "status": "in_force",
+   "pages": [
+    7
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Where there is an agreement to sell goods on the\nterms that the price is to be fixed by the valuation of a third party and such third party cannot or does\nnot make such valuation, the agreement is thereby avoided :"
+    },
+    {
+     "type": "proviso",
+     "text": "Provided that, if the goods or any part thereof have been delivered to, and appropriated by, the\nbuyer, he shall pay a reasonable price therefor."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where such third party is prevented from making the valuation by the fault of the seller or\nbuyer, the party not in fault may maintain a suit for damages against the party in fault."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s11",
+   "act": "SGA1930",
+   "number": "11",
+   "title": "Stipulations as to time",
+   "title_in_body": "Stipulations as to time.",
+   "chapter": "CHAPTER II",
+   "subheading": "Conditions and Warranties",
+   "status": "in_force",
+   "pages": [
+    7
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Unless a different intention appears from the terms of the\ncontract, stipulations as to time of payment are not deemed to be of the essence of a contract of sale.\nWhether any other stipulation as to time is of the essence of the contract or not depends on the terms\nof the contract."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s12",
+   "act": "SGA1930",
+   "number": "12",
+   "title": "Condition and warranty",
+   "title_in_body": "Condition and warranty.",
+   "chapter": "CHAPTER II",
+   "subheading": "Conditions and Warranties",
+   "status": "in_force",
+   "pages": [
+    8
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) A stipulation in a contract of sale with reference to goods\nwhich are the subject thereof may be a condition or a warranty."
+    },
+    {
+     "type": "body",
+     "text": "(2) A condition is a stipulation essential to the main purpose of the contract, the breach of which\ngives rise to a right to treat the contract as repudiated."
+    },
+    {
+     "type": "body",
+     "text": "(3) A warranty is a stipulation collateral to the main purpose of the contract, the breach of which\ngives rise to a claim for damages but not to a right to reject the goods and treat the contract as\nrepudiated."
+    },
+    {
+     "type": "body",
+     "text": "(4) Whether a stipulation in a contract of sale is condition or a warranty depends in each case\non the construction of the contract. A stipulation may be a condition, though called a warranty in the\ncontract."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s13",
+   "act": "SGA1930",
+   "number": "13",
+   "title": "When condition to be treated as warranty",
+   "title_in_body": "When condition to be treated as warranty.",
+   "chapter": "CHAPTER II",
+   "subheading": "Conditions and Warranties",
+   "status": "in_force",
+   "pages": [
+    8
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Where a contract of sale is subject to\nany condition to be fulfilled by the seller, the buyer may waive the condition or elect to treat the breach\nof the condition as a breach of warranty and not as a ground for treating the contract as repudiated."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where a contract of sale is not severable and the buyer has accepted the goods or part\nthereof, [* * *] the breach of any condition to be fulfilled by the seller can only be treated as a breach\nof warranty and not as a ground for rejecting the goods and treating the contract as repudiated, unless\nthere is a term of the contract, express or implied, to that effect."
+    },
+    {
+     "type": "body",
+     "text": "(3) Nothing in this section shall affect the case of any condition or warranty fulfilment of which\nis excused by law by reason of impossibility or otherwise."
+    }
+   ],
+   "footnotes": [
+    {
+     "page": 8,
+     "marker": "1",
+     "text": "Omitted by Ordinance No. XLVII OF 1962, s.3."
+    }
+   ],
+   "flags": [],
+   "footnote_refs": [
+    {
+     "page": 8,
+     "marker": "1"
+    }
+   ]
+  },
+  {
+   "id": "SGA1930:s14",
+   "act": "SGA1930",
+   "number": "14",
+   "title": "Implied undertaking as to title, etc.",
+   "title_in_body": "Implied undertaking as to title, etc.",
+   "chapter": "CHAPTER II",
+   "subheading": "Conditions and Warranties",
+   "status": "in_force",
+   "pages": [
+    8
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "In a contract of sale, unless the circumstances of\nthe contract are such as to show a different intention there is―\n(a)\nan implied condition on the part of the seller that, in the case of a sale, he has a\nright to sell the goods and that, in the case of an agreement to sell, he will have\na right to sell the goods at the time when the property is to pass ;\n(b)\nan implied warranty that the buyer shall have and enjoy quiet possession of the\ngoods ;\n(c)\nan implied warranty that the goods shall be free from any charge or\nencumbrance in favour of any third party not declared or known to the buyer\nbefore or at the time when the contract is made."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s15",
+   "act": "SGA1930",
+   "number": "15",
+   "title": "Sale by description",
+   "title_in_body": "Sale by description.",
+   "chapter": "CHAPTER II",
+   "subheading": "Conditions and Warranties",
+   "status": "in_force",
+   "pages": [
+    8
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where there is a contract for the sale of goods by description, there\nis an implied condition that the goods shall correspond with the description ; and, if the sale is by\nsample as well as by description it is not sufficient that the bulk of the goods corresponds with the\nsample if the goods do not also correspond with the description."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s16",
+   "act": "SGA1930",
+   "number": "16",
+   "title": "Implied conditions as to quality or fitness",
+   "title_in_body": "Implied conditions as to quality or fitness.",
+   "chapter": "CHAPTER II",
+   "subheading": "Conditions and Warranties",
+   "status": "in_force",
+   "pages": [
+    8,
+    9
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Subject to the provisions of this Act and of\nany other law for the time being in force, there is no implied warranty or condition as to the quality or\nfitness or any particular purpose of goods supplied under a contract of sale, except as follows :―"
+    },
+    {
+     "type": "body",
+     "text": "(1) Where the buyer, expressly or by implication, makes known to the seller the particular\npurpose for which the goods are required, so as to show that the buyer relies on the seller’s skill or\njudgment, and the goods are of a description which it is in the course of the seller’s business to supply"
+    },
+    {
+     "type": "body",
+     "text": "(whether he is the manufacturer of producer or not), there is an implied condition that the goods shall\nbe reasonably fit for such purpose :"
+    },
+    {
+     "type": "proviso",
+     "text": "Provided that, in the case of a contract for the sale of a specified article under its patent or\nother trade name, there is no implied condition as to its fitness for any particular purpose."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where goods are bought by description from a seller who deals in goods of that description"
+    },
+    {
+     "type": "body",
+     "text": "(whether he is the manufacturer or producer or not), there is an implied condition that the goods shall\nbe of merchantable quality :"
+    },
+    {
+     "type": "proviso",
+     "text": "Provided that, if the buyer has examined the goods, there shall be no implied condition as\nregards defects which such examination ought to have revealed."
+    },
+    {
+     "type": "body",
+     "text": "(3) An implied warranty or condition as to quality or fitness for a particular purpose may be\nannexed by the usage of trade."
+    },
+    {
+     "type": "body",
+     "text": "(4) An express warranty or condition does not negative a warranty or condition implied by this\nAct unless inconsistent therewith."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s16A",
+   "act": "SGA1930",
+   "number": "16A",
+   "title": "Seller to inform buyer of defect in goods sold",
+   "title_in_body": "Seller to inform buyer of defect in goods sold.",
+   "chapter": "CHAPTER II",
+   "subheading": "Conditions and Warranties",
+   "status": "in_force",
+   "pages": [
+    9
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Notwithstanding anything contained\nin section 16, and save where the parties have entered into an agreement to the contrary, the seller shall\nbe under an obligation to inform the buyer of any defect in the goods sold at the time of the contract,\nexcept in a case where the defect is obviously known to the buyer.]"
+    }
+   ],
+   "footnotes": [
+    {
+     "page": 9,
+     "marker": "1",
+     "text": "Ins. by Act No XVIII OF 1994, s.2."
+    }
+   ],
+   "flags": [],
+   "footnote_refs": [
+    {
+     "page": 9,
+     "marker": "1"
+    }
+   ]
+  },
+  {
+   "id": "SGA1930:s17",
+   "act": "SGA1930",
+   "number": "17",
+   "title": "Sale by sample",
+   "title_in_body": "Sale by sample.",
+   "chapter": "CHAPTER II",
+   "subheading": "Conditions and Warranties",
+   "status": "in_force",
+   "pages": [
+    9
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) A contract of sale is a contract for sale by sample where there is a\nterm in the contract, express or implied, to that effect."
+    },
+    {
+     "type": "body",
+     "text": "(2) In the case of a contract for sale by sample there is an implied condition\n(a)\nthat the bulk shall correspond with the sample in quality ;\n(b)\nthat the buyer shall have a reasonable opportunity of comparing the bulk with\nthe sample ;\n(c)\nthat the goods shall be free from any defect, rendering then, unmerchantable,\nwhich would not be apparent on reasonable examination of the sample."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s18",
+   "act": "SGA1930",
+   "number": "18",
+   "title": "Goods must be ascertained",
+   "title_in_body": "Goods must be ascertained.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Property as between Seller And Buyer",
+   "status": "in_force",
+   "pages": [
+    9
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where there is a contract for the sale of unascertained\ngoods, no property in the goods is transferred to the buyer unless and until the goods are ascertained."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s19",
+   "act": "SGA1930",
+   "number": "19",
+   "title": "Property passes when intended to pass",
+   "title_in_body": "Property passes when intended to pass.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Property as between Seller And Buyer",
+   "status": "in_force",
+   "pages": [
+    9,
+    10
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Where there is a contract for the sale of\nspecific or ascertained -goods the property in them, is transferred to the buyer at such time as the parties\nto the contract intend it to be transferred."
+    },
+    {
+     "type": "body",
+     "text": "(2) For the purpose of ascertaining the intention of the parties regard shall be had to the terms\nof the contract, the conduct of the parties and the circumstances of the case."
+    },
+    {
+     "type": "body",
+     "text": "(3) Unless a different intention appears, the rules contained in sections 20 to 24 are rules for\nascertaining intention of the time at which the property in the goods is to pass to the buyer."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s20",
+   "act": "SGA1930",
+   "number": "20",
+   "title": "Specific goods in a deliverable state",
+   "title_in_body": "Specific goods in a deliverable state.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Property as between Seller And Buyer",
+   "status": "in_force",
+   "pages": [
+    10
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where there is an unconditional contract for the\nsale of specific goods in a deliverable state, the property in the goods passes to the buyer when the\ncontract is made, and it is immaterial whether the time of payment of the price or the time of delivery\nof the goods, or both, is postponed."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s21",
+   "act": "SGA1930",
+   "number": "21",
+   "title": "Specific goods to be put into a deliverable state",
+   "title_in_body": "Specific goods to be put into a deliverable state.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Property as between Seller And Buyer",
+   "status": "in_force",
+   "pages": [
+    10
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where there is a contract for the sale\nof specific goods and the seller is bound to do something to the goods for the purpose of putting them\ninto a deliverable state, the property does not pass until such thing is done and the buyer has notice\nthereof."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s22",
+   "act": "SGA1930",
+   "number": "22",
+   "title": "Specific goods in a deliverable state, when the seller has to do anything thereto in order to ascertain price",
+   "title_in_body": "Specific goods in a deliverable state, when the seller has to do anything thereto in order to ascertain price.Where there is a contract for the sale of specific goods in a deliverable",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Property as between Seller And Buyer",
+   "status": "in_force",
+   "pages": [
+    10
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "state, but the seller is bound to weigh, measure, test or do some other act or thing with reference to the\ngoods for the purpose of ascertaining the price, the property does not pass until such act or thing is\ndone and the buyer has notice thereof."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s23",
+   "act": "SGA1930",
+   "number": "23",
+   "title": "Sale of unascertained goods and appropriation Delivery to carrier",
+   "title_in_body": "Sale of unascertained goods and appropriation.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Property as between Seller And Buyer",
+   "status": "in_force",
+   "pages": [
+    10
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Where there is a contract for the\nsale of unascertained or future goods by description and goods of that description and in a deliverable\nstate are unconditionally appropriated to the contract, either by the seller with the assent of the buyer\nor by the buyer with the assent of the seller, the property in the goods thereupon passes to the buyer.\nSuch assent may be express or implied, and may be given either before or after the appropriation is\nmade."
+    },
+    {
+     "type": "body",
+     "text": "(2) Delivery to carrier.Where, in pursuance of the contract, the seller delivers the goods to\nthe buyer or to a carrier or other bailee (whether named by the buyer or not) for the purpose of\ntransmission to the buyer, and does not reserve the right of disposal, he is deemed to have\nunconditionally appropriated the goods to the contract."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s24",
+   "act": "SGA1930",
+   "number": "24",
+   "title": "Goods sent on approval or “on sale or return”",
+   "title_in_body": "Goods sent on approval or “on sale or return”.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Property as between Seller And Buyer",
+   "status": "in_force",
+   "pages": [
+    10
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "When goods are delivered to the buyer\non approval or “on sale or return” or other similar terms, the property therein passes to the buyer\n(a)\nwhen he signifies his approval or acceptance to the seller or does any other act\nadopting the transaction ;\n(b)\nif he does not signify his approval or acceptance to the seller but retains the goods\nwithout giving notice of rejection, then, if a time has been fixed for the return of the\ngoods, on the expiration of such time, and, if no time has been fixed, on the expiration\nof a reasonable time."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s25",
+   "act": "SGA1930",
+   "number": "25",
+   "title": "Reservation of right of disposal",
+   "title_in_body": "Reservation of right of disposal.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Property as between Seller And Buyer",
+   "status": "in_force",
+   "pages": [
+    10,
+    11
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Where there is a contract for the sale of specific goods or\nwhere goods are subsequently appropriated to the contract, the seller may, by the terms of the contract or\nappropriation, reserve the right of disposal of the goods until certain conditions are fulfilled. In such case,\nnotwithstanding the delivery of the goods to a buyer, or to a carrier or other bailee for the purpose of transmission\nto the buyer, the property in the goods does not pass to the buyer until the conditions imposed by the seller are\nfulfilled.\n[(2) Where goods are shipped or are dispatched by railway and are by the bill of lading or by railway receipt\ndeliverable to the order of the seller or his agent the seller is prima facie deemed to reserve the right of disposal.]"
+    },
+    {
+     "type": "body",
+     "text": "(3) Where the seller of goods draws on the buyer for the price and transmits the bill of exchange\nand [bill of lading or railway receipt] to the buyer together, to secure acceptance or payment of the\nbill of exchange, the buyer is bound to return the [bill of lading or railway receipt] if he does not\nhonour the bill of exchange and if he wrongfully retains the [bill of lading or railway receipt] the\nproperty in the goods does not pass to him."
+    }
+   ],
+   "footnotes": [
+    {
+     "page": 10,
+     "marker": "1",
+     "text": "Subs. by Ordinance No. XLVII OF 1962, s.4"
+    },
+    {
+     "page": 11,
+     "marker": "1",
+     "text": "Subs. by Ordinance No. XLVII OF 1962, s.4."
+    }
+   ],
+   "flags": [],
+   "footnote_refs": [
+    {
+     "page": 10,
+     "marker": "1"
+    },
+    {
+     "page": 11,
+     "marker": "1"
+    }
+   ]
+  },
+  {
+   "id": "SGA1930:s26",
+   "act": "SGA1930",
+   "number": "26",
+   "title": "Risk prima facie passes with property",
+   "title_in_body": "Risk prima faciepasses with property.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Property as between Seller And Buyer",
+   "status": "in_force",
+   "pages": [
+    11
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Unless otherwise agreed, the goods remain at\nthe seller’s risk until the property therein is transferred to the buyer, but when the property therein is\ntransferred to the buyer, the goods are at the buyer’s risk whether delivery has been made or not :"
+    },
+    {
+     "type": "proviso",
+     "text": "Provided that, where delivery has been delayed through the fault of either buyer or seller, the\ngoods are at the risk of the party in fault as regards any loss which might not have occurred but for\nsuch fault :"
+    },
+    {
+     "type": "proviso",
+     "text": "Provided also that nothing in this section shall affect the duties or liabilities of either seller or\nbuyer as a bailee of the goods of the other party."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s27",
+   "act": "SGA1930",
+   "number": "27",
+   "title": "Sale by person not the owner",
+   "title_in_body": "Sale by person not the owner.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Title",
+   "status": "in_force",
+   "pages": [
+    11
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Subject to the provisions of this Act and of any other law\nfor the time being in force, where goods are sold by a person who is not the owner thereof and who\ndoes not sell them under the authority or with the consent of the owner, the buyer acquires no better\ntitle to the goods than the seller had, unless the owner of the goods is by his conduct precluded from\ndenying the seller's authority to sell :"
+    },
+    {
+     "type": "proviso",
+     "text": "Provided that, where a mercantile agent is, with the consent of the owner, in possession of the\ngoods or of a document of title to the goods, any sale made by him, when acting in the ordinary course\nof business of a mercantile agent, shall be as valid as if he were expressly authorised by the owner of\nthe goods to make the same; provided that buyer acts in good faith and has not at the time of the\ncontract of sale notice that the seller has not authority to sell."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s28",
+   "act": "SGA1930",
+   "number": "28",
+   "title": "Sale by one of joint owners",
+   "title_in_body": "Sale by one of joint owners.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Title",
+   "status": "in_force",
+   "pages": [
+    11
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "If one of several joint owners of goods has the sole\npossession of them by permission of the co-owners, the property in the goods in transferred to any\nperson who buys them of such joint owner in good faith and has not at the time of the contract of sale\nnotice that the seller has not authority to sell."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s29",
+   "act": "SGA1930",
+   "number": "29",
+   "title": "Sale by person in possession under voidable contract",
+   "title_in_body": "Sale by person in possession under voidable contract.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Title",
+   "status": "in_force",
+   "pages": [
+    11
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "When the seller of goods has\nobtained possession thereof under a contract voidable under section 19 or section 19A of the Contract\nAct, 1872 (IX of 1872), but the contract has not been rescinded at the time of the sale, the buyer\nacquires a good title to the goods, provided he buys them in good faith and without notice of the seller’s\ndefect of title."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s30",
+   "act": "SGA1930",
+   "number": "30",
+   "title": "Seller or buyer in possession after sale",
+   "title_in_body": "Seller or buyer in possession after sale.",
+   "chapter": "CHAPTER III",
+   "subheading": "Transfer of Title",
+   "status": "in_force",
+   "pages": [
+    11,
+    12
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Where a person, having sold goods,\ncontinues or is in possession of the goods or of the documents of title to the goods, the delivery or\ntransfer by that person or by a mercantile agent acting for him, of the goods or documents of title under\nany sale, pledge or other disposition thereof to any person receiving the same in good faith and without\nnotice of the previous sale shall have the same effect as if the person making the delivery or transfer\nwere expressly authorised by the owner of the goods to make the same."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where a person, having bought or agreed to buy goods, obtains, with the consent of the\nseller, possession of the goods or the documents of title to the goods, the delivery or transfer by that\nperson or by a mercantile agent acting for him, of the goods or documents of title under any sale,\npledge or other disposition thereof to any person receiving the same in good faith and without notice\nof any lien or other right of the original seller in respect of the goods shall have effect as if such lien\nor right did not exist."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s31",
+   "act": "SGA1930",
+   "number": "31",
+   "title": "Duties of seller and buyer",
+   "title_in_body": "Duties of seller and buyer.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    12
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "It is the duty of the seller to deliver the goods and of the\nbuyer to accept and pay for them, in accordance with the terms of the contract of sale."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s32",
+   "act": "SGA1930",
+   "number": "32",
+   "title": "Payment and delivery are concurrent conditions",
+   "title_in_body": "Payment and delivery are concurrent conditions.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    12
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Unless otherwise agreed, delivery of\nthe goods and payment of the price are concurrent conditions, that is to say, the seller shall be ready\nand willing to give possession of the goods to the buyer in exchange for the price, and the buyer shall\nbe ready and willing to pay the price in exchange for possession of the goods."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s33",
+   "act": "SGA1930",
+   "number": "33",
+   "title": "Delivery",
+   "title_in_body": "Delivery.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    12
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Delivery of goods sold may be made by doing anything which the parties agree\nshall be treated as delivery or which has effect of putting the goods in the possession of the buyer or\nof any person authorised to hold them on his behalf."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s34",
+   "act": "SGA1930",
+   "number": "34",
+   "title": "Effect of part delivery",
+   "title_in_body": "Effect of part delivery.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    12
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "A delivery of part of goods, to progress of the delivery of the\nwhole, has the same effect, for the purpose of passing the property in such goods, as a delivery of the\nwhole; but a delivery of part of the goods, with an intention of severing it from the whole, does not\noperate as a delivery of the remainder."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s35",
+   "act": "SGA1930",
+   "number": "35",
+   "title": "Buyer to apply for delivery",
+   "title_in_body": "Buyer to apply for delivery.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    12
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Apart from any express contract, the seller of goods is not\nbound to deliver them until the buyer applies for delivery."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s36",
+   "act": "SGA1930",
+   "number": "36",
+   "title": "Rules as to delivery",
+   "title_in_body": "Rule as to delivery.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    12,
+    13
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Whether it is for the buyer to take possession of the goods or for\nthe seller to send them to the buyer is a question depending in each case on the contract, express or\nimplied, between the parties. Apart from any such contract, goods sold are to be delivered at the place\nat which they are at the time of the sale, and goods agreed to be sold are to be delivered at the place at\nwhich they are at the time of the agreement to sell, or if not then in existence, at the place at which\nthey are manufactured or produced."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where under the contract of sale the seller is bound to send the goods to the buyer, but no\ntime for sending them is fixed, the seller is bound to send them within a reasonable time."
+    },
+    {
+     "type": "body",
+     "text": "(3) Where the goods at the time of sale are in the possession of third persons, there is no delivery\nby seller to buyer unless and until such third person acknowledges to the buyer that he holds the goods\non his behalf :"
+    },
+    {
+     "type": "proviso",
+     "text": "Provided that nothing in this section shall affect the operation of the issue or transfer of any\ndocument of title to goods."
+    },
+    {
+     "type": "body",
+     "text": "(4) Demand or tender of delivery may be treated as ineffectual unless made at a reasonable\nhour. What is a reasonable hour is a question of fact."
+    },
+    {
+     "type": "body",
+     "text": "(5) Unless otherwise agreed, the expenses of and incidental to putting the goods into a\ndeliverable state shall be borne by the seller."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s37",
+   "act": "SGA1930",
+   "number": "37",
+   "title": "Delivery of wrong quantity",
+   "title_in_body": "Delivery of wrong quantity.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    13
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Where the seller delivers to the buyer a quantity of\ngoods less than he contracted to sell, the buyer may reject them, but if the buyer accepts the goods so\ndelivered he shall pay for them at the contract rate."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where the seller delivers to the buyer a quantity of goods larger than he contracted to sell,\nthe buyer may accept the goods included in the contract and reject the rest, or [, if the goods delivered\nare such that it is difficult or time consuming to separate the quantity contracted for,] he may reject the\nwhole. If the buyer accepts the whole of the goods so delivered, he shall pay for them at the contract\nrate."
+    },
+    {
+     "type": "body",
+     "text": "(3) Where the seller delivers to the buyer the goods he contracted to sell mixed with goods of\na different description not included in the contract, the buyer may accept the goods which are in\naccordance with the contract and reject the rest, or may reject the whole."
+    },
+    {
+     "type": "body",
+     "text": "(4) The provisions of this section are subject to any usage of trade, special agreement or course\nof dealing between the parties."
+    }
+   ],
+   "footnotes": [
+    {
+     "page": 13,
+     "marker": "1",
+     "text": "Ins. by Act No. XVIII OF 1994, s. 3."
+    }
+   ],
+   "flags": [],
+   "footnote_refs": [
+    {
+     "page": 13,
+     "marker": "1"
+    }
+   ]
+  },
+  {
+   "id": "SGA1930:s38",
+   "act": "SGA1930",
+   "number": "38",
+   "title": "Instalment deliveries",
+   "title_in_body": "Installment deliveries.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    13
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Unless otherwise agreed, the buyer of goods is not bound to\naccept delivery thereof by installments."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where there is a contract for the sale of goods to be delivered by stated instalments which\nare to be separately paid for, and the seller makes no delivery or defective delivery in respect of one or\nmore instalments, or the buyer neglects or refuses to take delivery of or pay for one or more instalments,\nit is a question in each case depending on the terms of the contract and the circumstances of the case,\nwhether the breach of contract is a repudiation of the whole contract, or whether it is a severable breach\ngiving rise to a claim for compensation, but not to a right to treat the whole contract as repudiated."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s39",
+   "act": "SGA1930",
+   "number": "39",
+   "title": "Delivery to carrier or wharfinger",
+   "title_in_body": "Delivery to carrier or wharfinger.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    13
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1)Where in pursuance of a contract of sale, the\nseller is authorised or required to send the goods to the buyer, delivery of the goods to a carrier, whether\nnamed by the buyer or not, for the purpose of transmission to the buyer, or delivery of the goods to a\nwharfinger for safe custody, is prima facie deemed to be a delivery of the goods to the buyer."
+    },
+    {
+     "type": "body",
+     "text": "(2) Unless otherwise authorised by the buyer, the seller shall make such contract with the carrier\nor wharfinger on behalf of the buyer as may be reasonable having regard to the nature of the goods and\nthe other circumstances of the case. If the seller omits so to do, and the goods are lost or damaged in\ncourse of transit or whilst in the custody of the wharfinger, the buyer may decline to treat the delivery\nto the carrier or wharfinger as a delivery to himself, or may hold the seller responsible in damages."
+    },
+    {
+     "type": "body",
+     "text": "(3) Unless otherwise agreed, where goods are sent by the seller to the buyer by a route involving\nsea transit, in circumstances in which it is unsual to insure, the seller shall give such notice to the buyer\nas may enable him to insure them during their sea transit, and if the seller fails so to do, the goods shall\nbe deemed to be at his risk during such sea transit."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s40",
+   "act": "SGA1930",
+   "number": "40",
+   "title": "Risk where goods are delivered at distant place",
+   "title_in_body": "Risk where goods are delivered at distant place.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    13
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where the seller of goods agrees to deliver\nthem at his own risk at a place other than that where they are when sold, the buyer shall, nevertheless, unless\notherwise agreed, take any risk of deterioration in the goods necessarily incident to the course of transit."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s41",
+   "act": "SGA1930",
+   "number": "41",
+   "title": "Buyer’s right of examining the goods",
+   "title_in_body": "Buyer’s right of examining the goods.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    14
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Where goods are delivered to the buyer which\nhe has not previously examined, he is not deemed to have accepted them unless and until he has had a\nreasonable opportunity of examining them for the purpose of ascertaining whether they are in\nconformity with the contract."
+    },
+    {
+     "type": "body",
+     "text": "(2) Unless otherwise agreed, when the seller tenders delivery of goods to the buyer, he is bound,\non request, to afford the buyer a reasonable opportunity of examining the goods for the purpose of\nascertaining whether they are in conformity with the contract."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s42",
+   "act": "SGA1930",
+   "number": "42",
+   "title": "Acceptance",
+   "title_in_body": "Acceptance.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    14
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "The buyer is deemed to have accepted the goods when he intimates to the\nseller, that he has accepted them, or when the goods have been delivered to him and he does any act in\nrelation to them which is inconsistent with the ownership of the seller, or when, after the lapse of a\nreasonable time, he retains the goods without intimating to the seller that he has rejected them."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s43",
+   "act": "SGA1930",
+   "number": "43",
+   "title": "Buyer not bound to return rejected goods",
+   "title_in_body": "Buyer not bound to return rejected goods.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    14
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Unless otherwise agreed, where goods are\ndelivered to the buyer and he refuses to accept them, having the right so to do, he is not bound to return\nthem to the seller, but it is sufficient if he intimates to the seller that he refuses to accept them."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s44",
+   "act": "SGA1930",
+   "number": "44",
+   "title": "Liability of buyer for neglecting or refusing delivery of goods",
+   "title_in_body": "Liability of buyer for neglecting or refusing delivery of goods.",
+   "chapter": "CHAPTER IV",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    14
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "When the seller is ready\nand willing to deliver the goods and requests the buyer to take delivery, and the buyer does not within\na reasonable time after such request take delivery of the goods, he is liable to the seller for any loss\noccasioned by his neglect or refusal to take delivery, and also for a reasonable charge for the care and\ncustody of the goods :"
+    },
+    {
+     "type": "proviso",
+     "text": "Provided that nothing in this section shall affect the rights of the seller where the neglect or\nrefusal of the buyer to take delivery amounts to a repudiation of the contract."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s45",
+   "act": "SGA1930",
+   "number": "45",
+   "title": "“Unpaid seller” defined",
+   "title_in_body": "“Unpaid seller” defined.",
+   "chapter": "CHAPTER V",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    14
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) The seller of goods is deemed to be an “unpaid seller”\nwithin the meaning of this Act\n(a)\nwhen the whole of the price has not been paid or tendered ;\n(b)\nwhen a bill of exchange or other negotiable instrument has been received as\nconditional payment, and the condition on which it was received has not been\nfulfilled by reason of the dishonour of the instrument or otherwise."
+    },
+    {
+     "type": "body",
+     "text": "(2) In this Chapter, the term “seller” includes any person who is in the position of a seller, as,\nfor instance, and agent of the seller to whom the bill of lading has been indorsed, or a consignor or\nagent who has himself paid, or is directly responsible for, the price."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s46",
+   "act": "SGA1930",
+   "number": "46",
+   "title": "Unpaid seller’s rights",
+   "title_in_body": "Unpaid seller’s rights.",
+   "chapter": "CHAPTER V",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    14,
+    15
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Subject to the provisions of this Act and of any law for the\ntime being in force, notwithstanding that the property in the goods may have passed to the buyer, the\nunpaid seller of goods, as such, has by implication of law\n(a)\na lien on the goods for the price while he is in possession of them ;\n(b)\nin case of the insolvency of the buyer a right of stopping the goods in transit\nafter he has parted with the possession of them ;\n(c)\na right of re-sale as limited by this Act."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where the property in goods has not passed to the buyer, the unpaid seller has, in addition\nto his other remedies, a right of withholding delivery similar to and co-extensive with his rights of lien\nand stoppage in transit where the property has passed to the buyer."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s47",
+   "act": "SGA1930",
+   "number": "47",
+   "title": "Seller’s lien",
+   "title_in_body": "Seller’s lien.",
+   "chapter": "CHAPTER V",
+   "subheading": "Unpaid seller’s Lien",
+   "status": "in_force",
+   "pages": [
+    15
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Subject to the provisions of this Act, the unpaid seller of goods who is\nin possession of them is entitled to retain possession of them until payment or tender of the price in the\nfollowing cases, namely :\n(a)\nwhere the goods have been sold without any stipulation as to credit ;\n(b)\nwhere the goods have been sold on credit, but the term of credit has expired ;\n(c)\nwhere the buyer becomes insolvent."
+    },
+    {
+     "type": "body",
+     "text": "(2) The seller may exercise his right of lien notwithstanding that he is in possession of the goods\nas agent or bailee for the buyer."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s48",
+   "act": "SGA1930",
+   "number": "48",
+   "title": "Part delivery",
+   "title_in_body": "Part delivery.",
+   "chapter": "CHAPTER V",
+   "subheading": "Unpaid seller’s Lien",
+   "status": "in_force",
+   "pages": [
+    15
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where an unpaid seller has made part delivery of the goods, he may\nexercise his right of lien on the remainder, unless such part delivery has been made under such\ncircumstances as to show an agreement to waive the lien."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s49",
+   "act": "SGA1930",
+   "number": "49",
+   "title": "Termination of lien",
+   "title_in_body": "Termination of lien.",
+   "chapter": "CHAPTER V",
+   "subheading": "Unpaid seller’s Lien",
+   "status": "in_force",
+   "pages": [
+    15
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) The unpaid seller of goods loses his lien thereon―\n(a)\nwhen he delivers the goods to a carrier or other bailee for the purpose of\ntransmission to the buyer without reserving the right of disposal of the goods ;\n(b)\nwhen the buyer or his agent lawfully obtains possession of the goods ;\n(c)\nby waiver thereof."
+    },
+    {
+     "type": "body",
+     "text": "(2) The unpaid seller of goods, having a lien thereon, does not lose his lien by reason only that\nhe has obtained a decree for the price of the goods."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s50",
+   "act": "SGA1930",
+   "number": "50",
+   "title": "Right of stoppage in transit",
+   "title_in_body": "Right of stoppage in transit.",
+   "chapter": "CHAPTER V",
+   "subheading": "Stoppage in Transit",
+   "status": "in_force",
+   "pages": [
+    15
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Subject to the provisions of this Act, when the buyer of\ngoods becomes insolvent, the unpaid seller who has parted with the possession of the goods has the\nright of stopping them in transit, that is to say, he may resume possession of the goods as long as they\nare in the course of transit, and may retain them until payment or tender of the price."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s51",
+   "act": "SGA1930",
+   "number": "51",
+   "title": "Duration of transit",
+   "title_in_body": "Duration of transit.",
+   "chapter": "CHAPTER V",
+   "subheading": "Stoppage in Transit",
+   "status": "in_force",
+   "pages": [
+    15,
+    16
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Goods are deemed to be in course of transit from the time when\nthey are delivered to a carrier or other bailee for the purpose of transmission to the buyer, until the\nbuyer or his agent in that behalf takes delivery of them from such carrier or other bailee."
+    },
+    {
+     "type": "body",
+     "text": "(2) If the buyer or his agent in that behalf obtains delivery of the goods before their arrival at\nthe appointed destination, the transit is at an end."
+    },
+    {
+     "type": "body",
+     "text": "(3) If, after the arrival of the goods at the appointed destination, the carrier or other bailee\nacknowledges  to  the buyer  or  his  agent  that  he holds  the goods  on  his  behalf  and  continues in\npossession of them as bailee for the buyer or his agent, the transit is at an end and it is immaterial that\na further destination for the goods may have been indicated by the buyer."
+    },
+    {
+     "type": "body",
+     "text": "(4) If the goods are rejected by the buyer and the carrier or other bailee continues in possession\nof them, the transit is not deemed to be at an end, even if the seller has refused to receive them back."
+    },
+    {
+     "type": "body",
+     "text": "(5) When goods are delivered to a ship chartered by the buyer, it is a question depending on\nthe circumstances of the particular case, whether they are in the possession of the master as a carrier\nor as agent of the buyer."
+    },
+    {
+     "type": "body",
+     "text": "(6) Where the carrier or other bailee wrongfully refuses to deliver the goods to the buyer or his\nagent in that behalf, the transit is deemed to be at an end."
+    },
+    {
+     "type": "body",
+     "text": "(7) Where part delivery of the goods has been made to the buyer or his agent in that behalf, the\nremainder of the goods may be stopped in transit, unless such part delivery has been given in such\ncircumstances as to show an agreement to give up possession of the whole of the goods."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s52",
+   "act": "SGA1930",
+   "number": "52",
+   "title": "How stoppage in transit is effected",
+   "title_in_body": "How stoppage in transit is effected.",
+   "chapter": "CHAPTER V",
+   "subheading": "Stoppage in Transit",
+   "status": "in_force",
+   "pages": [
+    16
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) The unpaid seller may exercise his right of\nstoppage in transit either by taking actual possession of the goods, or by giving notice of his claim to\nthe carrier or other bailee in whose possession the goods are. Such notice may be given either to the\nperson in actual possession of the goods or to his principal. In the latter case the notice, to be effectual,\nshall be given at such time and in such circumstances that the principal, by the exercise of reasonable\ndiligence, may communicate it to his servant or agent in time to prevent a delivery to the buyer."
+    },
+    {
+     "type": "body",
+     "text": "(2) When notice of stoppage in transit is given by the seller to the carrier or other bailee in\npossession of the goods, he shall re-deliver the goods to, or according to the directions of, the seller.\nThe expenses of such re-delivery shall be borne by the seller."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s53",
+   "act": "SGA1930",
+   "number": "53",
+   "title": "Effect of sub-sale or pledge by buyer",
+   "title_in_body": "Effect of sub-sale or pledge by buyer.",
+   "chapter": "CHAPTER V",
+   "subheading": "Transfer by Buyer and Seller",
+   "status": "in_force",
+   "pages": [
+    16
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Subject to the provisions of this Act, the\nunpaid seller’s right of lien or stoppage in transit is not affected by any sale or other disposition of the\ngoods which the buyer may have made, unless the seller has assented thereto :"
+    },
+    {
+     "type": "proviso",
+     "text": "Provided that where a document of title to goods has been issued or lawfully transferred to any\nperson as buyer or owner of the goods, and that person transfers the document to a person who takes\nthe document in good faith and for consideration, then, if such last mentioned transfer was by way of\nsale, the unpaid seller’s right of lien or stoppage in transit is defeated, and, if such last mentioned\ntransfer was by way of pledge or other disposition for value, the unpaid seller’s right of lien or stoppage\nin transit can only be exercised subject to the rights of the transferee."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where the transfer is by way of pledge, the unpaid seller may require the pledge to have the\namount secured by the pledge satisfied in the first instance, as far as possible, out of any other goods\nor securities of the buyer in the hands of the pledgee and available against the buyer."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s54",
+   "act": "SGA1930",
+   "number": "54",
+   "title": "Sale not generally rescinded by lien or stoppage in transit",
+   "title_in_body": "Sale not generally rescinded by lien or stoppage in transit",
+   "chapter": "CHAPTER V",
+   "subheading": "Transfer by Buyer and Seller",
+   "status": "in_force",
+   "pages": [
+    16,
+    17
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Subject to the\nprovisions of this section, a contract of sale is not rescinded by the mere exercise by an unpaid seller\nof his right of lien or stoppage in transit."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where the goods are of a perishable nature, or where the unpaid seller who has exercised\nhis right of lien or stoppage in transit gives notice to the buyer of his intention to re-sell, the unpaid\nseller may, if the buyer does not within a reasonable time pay or tender the price, re-sell the goods\nwithin a reasonable time and recover from the original buyer damages for any loss occasioned by his\nbreach of contract, but the buyer shall not be entitled to any profit which may occur on the re-sale. If\nsuch notice is not given, the unpaid seller shall not be entitled to recover such damages and the buyer\nshall be entitled to the profit, if any, on the re-sale."
+    },
+    {
+     "type": "body",
+     "text": "(3) Where an unpaid seller who has exercised his right of lien or stoppage in transit re-sells the\ngoods, the buyer acquires a good title thereto as against the original buyer, notwithstanding that no\nnotice of the re-sale has been given to the original buyer."
+    },
+    {
+     "type": "body",
+     "text": "(4) Where the seller expressly reserves a right of re-sale in case the buyer should make default,\nand, on the buyer making default, re-sells the goods, the original contract of sale is thereby rescinded,\nbut without prejudice to any claim which the seller may have for damages."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s55",
+   "act": "SGA1930",
+   "number": "55",
+   "title": "Suit for price",
+   "title_in_body": "Suit for price.",
+   "chapter": "CHAPTER VI",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    17
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Where under a contract of sale the property in the goods has passed to\nthe buyer and the buyer wrongfully neglects or refuses to pay for the goods according to the terms of\nthe contract, the seller may sue him for the price of the goods."
+    },
+    {
+     "type": "body",
+     "text": "(2) Where under a contract of sale the price is payable on a day certain irrespective of delivery\nand the buyer wrongfully neglects or refuses to pay such price, the seller may sue him for the price\nalthough the property in the goods has not passed and the goods have not been appropriated to the\ncontract."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s56",
+   "act": "SGA1930",
+   "number": "56",
+   "title": "Damages for non-acceptance",
+   "title_in_body": "Damages for non acceptance.",
+   "chapter": "CHAPTER VI",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    17
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where the buyer wrongfully neglects or refuses to accept\nand pay for the goods, the seller may sue him for damages for non-acceptance."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s57",
+   "act": "SGA1930",
+   "number": "57",
+   "title": "Damages for non-delivery",
+   "title_in_body": "Damages for non-delivery.",
+   "chapter": "CHAPTER VI",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    17
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where the seller wrongfully neglects of refuses to deliver\nthe goods to the buyer, the buyer may sue the seller for damages for non-delivery."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s58",
+   "act": "SGA1930",
+   "number": "58",
+   "title": "Specific performance",
+   "title_in_body": "Specific performance.",
+   "chapter": "CHAPTER VI",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    17
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Subject to the provisions of Chapter II of the Specific Relief Act,\n1877 (I of 1877), in any suit for breach of contract to deliver specific or ascertained goods, the Court\nmay, if it thinks fit, on the application of the plaintiff, by its decree direct that the contract shall be\nperformed specifically, without giving the defendant the option of retaining the goods on payment of\ndamages. The decree may be unconditional, or upon such terms and conditions as to damages, payment\nof the price or otherwise, as the Court may deem just, and the application of the plaintiff may be made\nat any time before the decree."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s59",
+   "act": "SGA1930",
+   "number": "59",
+   "title": "Remedy for breach of warranty",
+   "title_in_body": "59Remedy for breach of warranty.",
+   "chapter": "CHAPTER VI",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    17
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Where there is a breach of warranty by the seller, or where\nthe buyer elects or is compelled to treat any breach of a condition on the part of the seller as a breach\nof warranty, the buyer is not by reason only of such breach of Warranty entitled to reject the goods ;\nbut he may\n(a)\nset up against the seller the breach of warranty in diminution or extinction of the\nprice ; or\n(b)\nsue the seller for damages for breach of warranty."
+    },
+    {
+     "type": "body",
+     "text": "(2) The fact that a buyer has set up a breach of warranty in diminution of extinction of the price\ndoes not prevent him from suing for the same breach of warranty if he has suffered further damage."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s60",
+   "act": "SGA1930",
+   "number": "60",
+   "title": "Repudiation of contract before due date",
+   "title_in_body": "Repudiation of contract before due date.",
+   "chapter": "CHAPTER VI",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    18
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where either party to a contract of sale\nrepudiates the contract before the date of delivery, the other may either treat the contract as subsisting\nand wait till the date of delivery, or he may treat the contract as rescinded and sue for damages for the\nbreach."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s61",
+   "act": "SGA1930",
+   "number": "61",
+   "title": "Interest by way of damages and special damages",
+   "title_in_body": "Interest by way of damages and special damages.()",
+   "chapter": "CHAPTER VI",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    18
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "1Nothing in this Act shall affect\nthe right of the seller or the buyer to recover interest or special damages in any case where by law\ninterest or special damages may be recoverable, or to recover the money paid where the consideration\nfor the payment of it has failed."
+    },
+    {
+     "type": "body",
+     "text": "(2) In the absence of a contract to the contrary, the Court may award interest at such rate as it\nthinks fit on the amount of the price\n(a)\nto the seller in a suit by him for the amount of the price―from the date of the\ntender of the goods or from the date on which the price was payable ;\n(b)\nto the buyer in a suit by him for the refund of the price in a case of a breach of\nthe contract on the part of the sellerfrom the date on which the payment was\nmade."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s62",
+   "act": "SGA1930",
+   "number": "62",
+   "title": "Exclusion of implied terms and conditions",
+   "title_in_body": "Exclusion of implied terms and conditions.",
+   "chapter": "CHAPTER VII",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    18
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where any right, duty or liability would\narise under a contract of sale by implication of law, it may be negatived or varied by express agreement\nor by the course of dealing between the parties, or by usage, if the usage is such as to bind both parties\nto the contract."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s63",
+   "act": "SGA1930",
+   "number": "63",
+   "title": "Reasonable time a question of fact",
+   "title_in_body": "Reasonable time a question of fact.",
+   "chapter": "CHAPTER VII",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    18
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "Where in this Act any reference is made to a\nreasonable time, the question what is a reasonable time is a question of fact."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s64",
+   "act": "SGA1930",
+   "number": "64",
+   "title": "Auction sale",
+   "title_in_body": "Auction sale.",
+   "chapter": "CHAPTER VII",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    18,
+    19
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "In the case of a sale by auction."
+    },
+    {
+     "type": "body",
+     "text": "(1) where goods are put up for sale in lots, each lot is prima facie deemed to be the subject of\na separate contract of sale ;"
+    },
+    {
+     "type": "body",
+     "text": "(2) the sale is complete when the auctioneer announces its completion by the fall of the hammer\nor in other customary manner ; and, until such announcement is made, any bidder may retract his bid ;"
+    },
+    {
+     "type": "body",
+     "text": "(3) a right to bid may be reserved expressly by or on behalf of the seller and, where such right\nis expressly so reserved, but not otherwise, the seller or any one person on his behalf may, subject to\nthe provisions hereinafter contained, bid at the auction ;"
+    },
+    {
+     "type": "body",
+     "text": "(4) where the sale is not notified to be subject to a right to bid on behalf of the seller, it shall\nnot be lawful for the seller to bid himself or to employ and person to bid at such sale, or for the\nauctioneer knowingly to take any bid from the seller or any such person ; and any sale contravening\nthis rule may be treated as fraudulent by the buyer ;"
+    },
+    {
+     "type": "body",
+     "text": "(5) the sale may be notified to be subject to a reserved or upset price ;"
+    },
+    {
+     "type": "body",
+     "text": "(6) if the seller makes use of pretended bidding to raise the price, the sale is voidable at the\noption of the buyer."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  },
+  {
+   "id": "SGA1930:s64A",
+   "act": "SGA1930",
+   "number": "64A",
+   "title": "In contracts of sale amount of increased or decreased duty or tax to be added or deducted",
+   "title_in_body": "In contracts of sale amount of increased or decreased duty or tax to be added or deducted.In the event of any duty of customs or excise [or tax] on any goods being imposed,",
+   "chapter": "CHAPTER VII",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    19
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "increased, decreased or remitted after the making of any contract for the sale of such goods without\nstipulation [as to the payment of duty or tax where the duty or tax] was not chargeable at the time of\nthe making of the contract, or for the sale of such goods [duty-paid or tax-paid where duty or tax] was\nchargeable at that time,\nif such imposition or increase so takes effect that [the duty or tax or increased\n(a)\nduty or tax], as the case may be, or any part thereof, is paid, the seller may add\nso much to the contract price as will be equivalent to the amount paid [in respect\nof such duty or tax or increase of duty or tax], and he shall be entitled to be paid\nand to sue for and recover such addition, and\nif such decrease or remission so takes effect that the decreased duty [or tax]\n(b)\nonly or no duty [or tax], as the case may be, is paid, the buyer may deduct so\nmuch from the contract price as will be equivalent to the decrease of duty [or\ntax] or remitted duty [or tax], and he shall not be liable to pay, or be sued for\nor in respect of, such deduction.]"
+    },
+    {
+     "type": "explanation",
+     "text": "Explanation.___The word “tax” in this section means the tax payable under the Sales Tax Act,\n1951 (III of 1951).]"
+    }
+   ],
+   "footnotes": [
+    {
+     "page": 19,
+     "marker": "1",
+     "text": "Ins. by Act No. XLI OF 1940, s. 2."
+    },
+    {
+     "page": 19,
+     "marker": "2",
+     "text": "Ins. and Subs. by Act. No. V OF 1956, s.2."
+    }
+   ],
+   "flags": [],
+   "footnote_refs": [
+    {
+     "page": 19,
+     "marker": "1"
+    },
+    {
+     "page": 19,
+     "marker": "2"
+    }
+   ]
+  },
+  {
+   "id": "SGA1930:s65",
+   "act": "SGA1930",
+   "number": "65",
+   "title": "[Repealed]",
+   "title_in_body": "[Repealed]",
+   "chapter": "CHAPTER VII",
+   "subheading": null,
+   "status": "repealed",
+   "pages": [
+    19
+   ],
+   "blocks": [],
+   "footnotes": [
+    {
+     "page": 19,
+     "marker": "3",
+     "text": "Repealed by the Repealing Act No. I of 1938, s. 2 and Schedule."
+    }
+   ],
+   "flags": [],
+   "footnote_refs": [
+    {
+     "page": 19,
+     "marker": "3"
+    }
+   ]
+  },
+  {
+   "id": "SGA1930:s66",
+   "act": "SGA1930",
+   "number": "66",
+   "title": "Savings",
+   "title_in_body": "Savings.",
+   "chapter": "CHAPTER VII",
+   "subheading": null,
+   "status": "in_force",
+   "pages": [
+    19
+   ],
+   "blocks": [
+    {
+     "type": "body",
+     "text": "(1) Nothing in this Act or in any repeal effected thereby shall affect or be deemed\nto affect\n(a)\nany right, title, interest, obligation or liability already acquired, accrued or\nincurred before the commencement of this Act, or\n(b)\nany legal proceedings or remedy in respect of any such right, title, interest,\nobligation or lability, or\n(c)\nanything done or suffered before the commencement of this Act, or\n(d)\nan enactment relating to the sale of goods which is not expressly repealed by\nthis Act, or\n(e)\nany rule of law not inconsistent with this Act."
+    },
+    {
+     "type": "body",
+     "text": "(2) The rules of insolvency relating to contracts for the sale of goods shall continue to apply\nthereto, notwithstanding anything contained in this Act."
+    },
+    {
+     "type": "body",
+     "text": "(3) The provisions of this Act relating to contracts of sale do not apply to any transaction in the\nform of a contract of sale which is intended to operate by way of mortgage, pledge, charge or other\nsecurity."
+    }
+   ],
+   "footnotes": [],
+   "flags": [],
+   "footnote_refs": []
+  }
+ ]
+}

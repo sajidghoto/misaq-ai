@@ -1,0 +1,42 @@
+{
+ "act": "CA1872",
+ "ok": true,
+ "toc_entries": 194,
+ "parsed_sections": 195,
+ "failures": [],
+ "title_mismatches": [
+  [
+   "132",
+   "Liability of two persons primarily liabl",
+   "Liability of two persons primarily liabl"
+  ],
+  [
+   "145",
+   "Implied promise indemnify surety",
+   "Implied promise to indemnify surety"
+  ],
+  [
+   "154",
+   "Liability of bailee making unauthorised ",
+   "Liability of bailee making unauthorized "
+  ],
+  [
+   "157",
+   "Effect of mixture, without bailor’s cons",
+   "Effect of mixture, without bailor’s cons"
+  ]
+ ],
+ "empty_sections": [],
+ "sequence_gaps_unexplained": [],
+ "accepted_not_in_contents": [
+  "141"
+ ],
+ "hyphen_linebreaks": 18,
+ "review_items": [
+  {
+   "page": 46,
+   "line": "141. Surety’s right to benefit of creditor’s securities. A surety is entitled to",
+   "reason": "section 141 accepted: in body, missing from printed contents"
+  }
+ ]
+}
