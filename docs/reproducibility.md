@@ -40,6 +40,15 @@ test results.
 ```
 Purpose: lint and type-check source, tests, and scripts. Writes files: tool caches. Deterministic:
 yes for findings.
+## Step 6d alignment validation
+```powershell
+python -m pytest tests\unit\test_model_selection.py
+ruff check src tests scripts
+python -m mypy src tests scripts
+python -m pytest
+```
+Purpose: validate proposal-scoped model selection, lint, type safety, and the full test suite.
+Writes files: pytest and tool caches. Deterministic: yes for findings and test results.
 ## Human-made data
 The frozen statute PDFs/processed statutes and evaluation labels are human-made inputs and must
 not be regenerated or edited by this runbook. No scripts writing to `data/processed` or

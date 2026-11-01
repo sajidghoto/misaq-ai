@@ -16,6 +16,9 @@ verification:
       verified: true
 retrieval:
   top_n: 20
+selection:
+  recall_at_5_tolerance: null
+  max_peak_ram_bytes: null
 reference_tokenizer:
   model: BAAI/bge-small-en-v1.5
   revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
@@ -36,6 +39,33 @@ chunking:
     header_prefix: true
 
 models:
+  # Considered but out of proposal scope: Qwen3-Embedding, bge-m3, and nomic.
+  bge-large-en-v1.5:
+    hf_id: BAAI/bge-large-en-v1.5
+    revision: d4aa6901d3a41ba39fb536a557fa166f842b0e09
+    dimension: 1024
+    max_seq_length: 512
+    normalize: true
+    query_prefix: "Represent this sentence for searching relevant passages: "
+    document_prefix: ""
+    pooling: cls
+    trust_remote_code: false
+    batch_size: 4
+    device: cpu
+    parameter_count: 335142400
+  bge-base-en-v1.5:
+    hf_id: BAAI/bge-base-en-v1.5
+    revision: a5beb1e3e68b9ab74eb54cfd186867f64f240e1a
+    dimension: 768
+    max_seq_length: 512
+    normalize: true
+    query_prefix: "Represent this sentence for searching relevant passages: "
+    document_prefix: ""
+    pooling: cls
+    trust_remote_code: false
+    batch_size: 8
+    device: cpu
+    parameter_count: 109482752
   bge-small-en-v1.5:
     hf_id: BAAI/bge-small-en-v1.5
     revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
@@ -48,39 +78,17 @@ models:
     trust_remote_code: false
     batch_size: 16
     device: cpu
-  Qwen3-Embedding-0.6B:
-    hf_id: Qwen/Qwen3-Embedding-0.6B
-    revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
-    dimension: 1024
-    max_seq_length: 32768
-    normalize: true
-    query_prefix: unverified
+    parameter_count: 33360512
+  all-MiniLM-L6-v2:
+    hf_id: sentence-transformers/all-MiniLM-L6-v2
+    revision: 1110a243fdf4706b3f48f1d95db1a4f5529b4d41
+    dimension: 384
+    max_seq_length: 256
+    normalize: false
     document_prefix: ""
-    pooling: last_token
-    trust_remote_code: false
-    batch_size: 4
-    device: cpu
-  bge-m3:
-    hf_id: BAAI/bge-m3
-    revision: 5617a9f61b028005a4858fdac845db406aefb181
-    dimension: 1024
-    max_seq_length: 8192
-    normalize: true
     query_prefix: ""
-    document_prefix: ""
-    pooling: cls
-    trust_remote_code: false
-    batch_size: 4
-    device: cpu
-  nomic-embed-text-v1.5:
-    hf_id: nomic-ai/nomic-embed-text-v1.5
-    revision: e9b6763023c676ca8431644204f50c2b100d9aab
-    dimension: 768
-    max_seq_length: 8192
-    normalize: true
-    query_prefix: "search_query: "
-    document_prefix: "search_document: "
     pooling: mean
-    trust_remote_code: true
-    batch_size: 8
+    trust_remote_code: false
+    batch_size: 16
     device: cpu
+    parameter_count: 22713728

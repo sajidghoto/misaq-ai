@@ -17,7 +17,15 @@ reference tokenizer; sections are never crossed.
 
 `EmbeddingModelSpec` records the Hugging Face model ID and immutable revision, vector dimension,
 maximum sequence length, normalization setting, query/document prefixes, pooling, remote-code
-setting, CPU batch size, and device. Query and document encoding are separate operations.
+setting, CPU batch size, and device. Pipeline model candidates additionally record
+`parameter_count` for model-size ranking. Query and document encoding are separate operations.
+
+## Model selection configuration
+
+`selection.recall_at_5_tolerance` and `selection.max_peak_ram_bytes` are required before model
+selection and default to null in the pipeline config. Selection compares measured dev Recall@5
+with the best candidate, filters to the configured RAM budget, and chooses the smallest eligible
+candidate by `parameter_count`; ties are resolved by model name.
 
 ## Index metadata
 
