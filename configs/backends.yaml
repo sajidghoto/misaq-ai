@@ -1,0 +1,10 @@
+cloud:
+  model: gemini-2.5-flash-lite
+  # Candidate from the proposal; model availability and SDK behavior remain unverified.
+  temperature: 0.0
+  top_p: 1.0
+  max_output_tokens: 1024
+  seed: null
+  requests_per_minute: 10
+  max_calls: 100
+  api_key_env: MISAQ_GEMINI_API_KEY

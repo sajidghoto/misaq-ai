@@ -57,3 +57,18 @@ not be regenerated or edited by this runbook. No scripts writing to `data/proces
 ## Verification run — NOT IMPLEMENTED YET
 ## Scoring — NOT IMPLEMENTED YET
 ## Analysis — NOT IMPLEMENTED YET
+
+## Step 7 Experiment C generation
+```powershell
+python scripts\06_run_exp_c.py --system all --backend cloud --split pilot --dry-run
+python scripts\06_run_exp_c.py --smoke
+python -m ruff check src tests scripts
+python -m mypy src tests scripts
+python -m pytest
+```
+The dry run and tests use no network. `--smoke` makes exactly one real cloud request and never
+reads or writes the experiment replay cache; run it only when the owner has configured the API key.
+The script loads `MISAQ_GEMINI_API_KEY` from a repository-root `.env` file when it is not already
+set in the process environment; `.env` is not committed.
+The real cloud run is **run by owner**. The proposal's `gemini-2.5-flash-lite` model string and
+provider SDK behavior are not verified in this environment.

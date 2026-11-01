@@ -1,0 +1,10 @@
+Analyse this clause:
+{{CLAUSE}}
+
+Use only the supplied sections as evidence. Each supplied section is labelled by canonical
+section id and Act name. Return only JSON with this exact structure:
+{"claims":[{"issue":"string","explanation":"string","citations":["string"]}],"no_supported_provision":false}
+Do not invent provisions or citations.
+
+Supplied sections:
+{{SECTIONS}}

@@ -106,3 +106,16 @@ Verification is relative to the frozen processed corpus, not to real law. `WRONG
 coincidence caused by overlapping section numbers between Acts. Only section citations are
 extracted: Articles, Orders, Rules, and case law are not covered. Range expansion has a configured
 cap; over-cap ranges are `MALFORMED`. Support judgement remains manual and is not automated.
+
+## Experiment C generation
+
+`items.jsonl` is append-only and resumable. Each item contains `clause_id`, `system` (`S1`-
+`S4`), `status`, exact `raw_text`, backend `metadata`, and `error_type`/`error` when failed.
+S3 items additionally contain `retrieved_section_ids`; S4 items contain `oracle_section_ids`;
+grounded items contain `in_context`. `citations` contains the existing verification records.
+
+Clause records contain `clause_id`, `text`, `cloud_ok`, `source`, `licence`, and optional
+`oracle_section_ids`. Contract metadata may also contain `contract_id`, `source`, and `licence`.
+Structured S2-S4 output is:
+`{"claims":[{"issue":string,"explanation":string,"citations":[string]}],"no_supported_provision":boolean}`.
+Parse failures remain items with `status="error"` and `error_type="OUTPUT_PARSE"`; raw output is kept.
