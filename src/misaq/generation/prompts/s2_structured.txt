@@ -1,0 +1,6 @@
+Analyse this clause:
+{{CLAUSE}}
+
+Return only JSON with this exact structure:
+{"claims":[{"issue":"string","explanation":"string","citations":["string"]}],"no_supported_provision":false}
+Do not invent provisions or citations.
