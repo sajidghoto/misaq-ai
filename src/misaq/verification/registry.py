@@ -35,6 +35,13 @@ class ActRecord:
     section_text: dict[str, str]
 
 
+_SOURCE_PDFS = {
+    "CA1872": "PK-CA1872_source.pdf",
+    "SGA1930": "PK-SGA1930_service.pdf",
+    "SRA1877": "PK-SRA1877_Source.pdf",
+}
+
+
 @dataclass(frozen=True)
 class CorpusRegistry:
     acts: dict[str, ActRecord]
@@ -94,8 +101,8 @@ def _alias_confirmed(act_code: str, alias: str, acts: dict[str, ActRecord], raw_
         return True
     if raw_dir is None:
         return False
-    source_name = next((path.name for path in raw_dir.glob("*.pdf") if act_code[:2] in path.name.upper()), None)
-    if source_name is None:
+    source_name = _SOURCE_PDFS.get(act_code)
+    if source_name is None or not (raw_dir / source_name).is_file():
         return False
     import fitz
     document = fitz.open(raw_dir / source_name)
