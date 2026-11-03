@@ -97,7 +97,7 @@ def test_normalization_variants():
 def test_real_corpus_repealed_and_omitted_verdicts():
     processed = ROOT / "data" / "processed" / "statutes"
     acts = []
-    for path in processed.glob("*.json"):
+    for path in sorted(processed.glob("*.json")):
         if "_report" not in path.name:
             from misaq.domain.statute import Act
             acts.append(Act.from_dict(json.loads(path.read_text(encoding="utf-8"))))
@@ -106,15 +106,44 @@ def test_real_corpus_repealed_and_omitted_verdicts():
         Alias("CA1872", "Contract Act, 1872", True),
     ))
     repealed = next(
-        section.number for act in acts for section in act.sections
+        section.number for act in acts if act.code is ActCode.SGA1930 for section in act.sections
         if section.status is SectionStatus.REPEALED
     )
-    omitted = next(str(first) for act in acts for first, last in [(r.first, r.last) for r in act.omitted_ranges])
+    ca_act = next(act for act in acts if act.code is ActCode.CA1872)
+    omitted = str(ca_act.omitted_ranges[0].first)
     assert verify_citation(
         Citation("r", "repealed", "Sale of Goods Act, 1930", repealed), registry
     ).verdict is CitationVerdict.REPEALED_OR_OMITTED
     assert verify_citation(
         Citation("o", "omitted", "Contract Act, 1872", omitted), registry
+    ).verdict is CitationVerdict.REPEALED_OR_OMITTED
+
+
+def test_real_corpus_verdicts_are_independent_of_act_order():
+    processed = ROOT / "data" / "processed" / "statutes"
+    acts = [
+        Act.from_dict(json.loads(path.read_text(encoding="utf-8")))
+        for path in sorted(processed.glob("*.json"), reverse=True)
+        if "_report" not in path.name
+    ]
+    registry = CorpusRegistry.from_acts(acts, (
+        Alias("SGA1930", "Sale of Goods Act, 1930", True),
+        Alias("CA1872", "Contract Act, 1872", True),
+    ))
+    repealed = next(
+        section.number
+        for act in acts
+        if act.code is ActCode.SGA1930
+        for section in act.sections
+        if section.status is SectionStatus.REPEALED
+    )
+    assert verify_citation(
+        Citation("r", "repealed", "Sale of Goods Act, 1930", repealed),
+        registry,
+    ).verdict is CitationVerdict.REPEALED_OR_OMITTED
+    assert verify_citation(
+        Citation("o", "omitted", "Contract Act, 1872", "76"),
+        registry,
     ).verdict is CitationVerdict.REPEALED_OR_OMITTED
 
 

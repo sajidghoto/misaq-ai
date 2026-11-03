@@ -53,7 +53,25 @@ Writes files: pytest and tool caches. Deterministic: yes for findings and test r
 The frozen statute PDFs/processed statutes and evaluation labels are human-made inputs and must
 not be regenerated or edited by this runbook. No scripts writing to `data/processed` or
 `data/eval` were run.
-## Experiment B run — NOT IMPLEMENTED YET
+## Experiment B run
+```powershell
+python scripts\05_run_exp_b.py `
+  --model bge-small-en-v1.5 `
+  --chunking section_aware `
+  --split dev
+```
+Needs `data/eval/retrieval/dev.jsonl`; not run yet.
+
+## Retrieval demo
+```powershell
+python scripts\07_retrieve_demo.py `
+  --model bge-small-en-v1.5 `
+  --chunking section_aware `
+  --query "When is acceptance complete?" `
+  --k 5
+```
+The demo prints retrieved sections and writes no files.
+
 ## Verification run — NOT IMPLEMENTED YET
 ## Scoring — NOT IMPLEMENTED YET
 ## Analysis — NOT IMPLEMENTED YET

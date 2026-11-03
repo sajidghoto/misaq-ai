@@ -37,6 +37,7 @@ data/index/*/*
 *.bin
 
 # --- Runs: commit only the small, reviewable files ---
+runs/*.jsonl
 runs/*/*
 !runs/*/manifest.json
 !runs/*/resolved_config.yaml

@@ -57,19 +57,33 @@ def guard_test_split(root: Path, eval_path: Path, final: bool) -> None:
         raise RuntimeError("test split eval file hash is not listed in data/eval/SHA256SUMS")
 
 
-def _find_index(model_name: str, chunking_name: str) -> FaissIndex:
+def _find_index(model_name: str, chunking_name: str, index_id: str | None = None) -> FaissIndex:
     pipeline = yaml.safe_load((ROOT / "configs/pipeline.yaml").read_text(encoding="utf-8"))
     model_id = pipeline["models"][model_name]["hf_id"]
-    for directory in (ROOT / "data/index").iterdir():
+    matches: list[Path] = []
+    for directory in sorted((ROOT / "data/index").iterdir()):
         if not directory.is_dir() or not (directory / "index_meta.json").exists():
             continue
         meta = json.loads((directory / "index_meta.json").read_text(encoding="utf-8"))
-        if meta["model"]["hf_id"] == model_id and meta["chunking"]["strategy"] == chunking_name:
-            return FaissIndex.load(directory)
-    raise RuntimeError(f"no built index for model={model_name}, chunking={chunking_name}")
+        if (
+            meta["model"]["hf_id"] == model_id
+            and meta["chunking"]["strategy"] == chunking_name
+            and (index_id is None or meta["index_id"] == index_id)
+        ):
+            matches.append(directory)
+    if len(matches) == 1:
+        return FaissIndex.load(matches[0])
+    if len(matches) > 1:
+        ids = ", ".join(path.name for path in matches)
+        raise RuntimeError(
+            f"multiple indexes for model={model_name}, chunking={chunking_name}: {ids}; "
+            "use --index-id"
+        )
+    suffix = f", index_id={index_id}" if index_id is not None else ""
+    raise RuntimeError(f"no built index for model={model_name}, chunking={chunking_name}{suffix}")
 
 
-def main(model: str, chunking: str, split: str, final: bool) -> int:
+def main(model: str, chunking: str, split: str, final: bool, index_id: str | None = None) -> int:
     config = yaml.safe_load(CONFIG_PATH.read_text(encoding="utf-8"))
     config["model"] = model
     config["chunking"] = chunking
@@ -79,7 +93,7 @@ def main(model: str, chunking: str, split: str, final: bool) -> int:
     validate_eval_jsonl(eval_path, acts)
     if split == "test":
         guard_test_split(ROOT, eval_path, final)
-    index = _find_index(model, chunking)
+    index = _find_index(model, chunking, index_id)
     pipeline = yaml.safe_load((ROOT / "configs/pipeline.yaml").read_text(encoding="utf-8"))
     embedder = SentenceTransformerEmbedder(EmbeddingModelSpec.from_dict(pipeline["models"][model]))
     ks = [int(value) for value in config["ks"]]
@@ -96,9 +110,10 @@ if __name__ == "__main__":
     parser.add_argument("--chunking", default="section_aware")
     parser.add_argument("--split", choices=("dev", "test"), default="dev")
     parser.add_argument("--final", action="store_true")
+    parser.add_argument("--index-id")
     args = parser.parse_args()
     try:
-        sys.exit(main(args.model, args.chunking, args.split, args.final))
+        sys.exit(main(args.model, args.chunking, args.split, args.final, args.index_id))
     except (OSError, RuntimeError, ValueError) as error:
         print(str(error), file=sys.stderr)
         sys.exit(1)

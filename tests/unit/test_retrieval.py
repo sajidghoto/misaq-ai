@@ -63,3 +63,23 @@ def test_top_n_controls_chunks_retrieved_before_collapse():
     index = RecordingIndex()
     DenseRetriever(index, FakeEmbedder(_index().meta.model), top_n=2).retrieve(Query("q", "one"))
     assert index.k == 2
+
+
+def test_retrieve_demo_prints_top_sections(capsys):
+    import importlib.util
+    from pathlib import Path
+
+    script = Path(__file__).parents[2] / "scripts" / "07_retrieve_demo.py"
+    spec = importlib.util.spec_from_file_location("retrieve_demo", script)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+
+    module.print_results(
+        DenseRetriever(_index(), FakeEmbedder(_index().meta.model), top_n=3, top_k=1),
+        "one",
+        1,
+    )
+    output = capsys.readouterr().out
+    assert "Act: A | Section: 1 | Title: One | Score:" in output
+    assert output.count("\n") == 1

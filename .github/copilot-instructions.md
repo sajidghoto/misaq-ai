@@ -1,7 +1,7 @@
 # Misaq AI rules
 RAG system: analyses contract clauses against frozen statutes and verifies every statute citation. Correctness and reproducibility first.
 
-Start: read `docs/ai/state.md`. Open other docs only when the task needs them. End: update `state.md` in 3 lines.
+Start: read `docs/ai/state.md`. Open other docs only when the task needs them. End: append a dated 3-line entry to the Session log in state.md; never delete other sections.
 
 ## Architecture
 `domain` <- feature packages <- `scripts`/`app`. `domain/` imports nothing from the project and does no I/O. `scripts/` and `app/` hold no logic. Changing a `domain/` schema: ask first.
