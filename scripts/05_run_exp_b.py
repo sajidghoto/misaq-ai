@@ -40,7 +40,8 @@ def _listed_eval_hash(eval_path: Path) -> bool:
         name.lstrip("*"): digest
         for digest, name in (line.split(maxsplit=1) for line in sums.read_text(encoding="utf-8").splitlines() if line)
     }
-    return expected.get(eval_path.name) == sha256_file(eval_path)
+    fingerprint = sha256_file(eval_path)
+    return expected.get(eval_path.name) == fingerprint.sha256
 
 
 def guard_test_split(root: Path, eval_path: Path, final: bool) -> None:
@@ -54,7 +55,9 @@ def guard_test_split(root: Path, eval_path: Path, final: bool) -> None:
     except DataValidationError as error:
         raise RuntimeError("test split requires verified processed-statute hashes") from error
     if not _listed_eval_hash(eval_path):
-        raise RuntimeError("test split eval file hash is not listed in data/eval/SHA256SUMS")
+        raise RuntimeError(
+            f"test split eval file hash is not listed in {eval_path.parent / 'SHA256SUMS'}"
+        )
 
 
 def _find_index(model_name: str, chunking_name: str, index_id: str | None = None) -> FaissIndex:
