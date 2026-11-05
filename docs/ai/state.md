@@ -65,3 +65,7 @@ Metric and final-selection fields remain pending until the development summaries
 2026-11-05
 Fixed the Experiment B test hash guard to compare the stored digest with DataFingerprint.sha256.
 Focused Experiment B tests passed (7) and Ruff passed; final test rerun remains pending after commit.
+
+2026-11-05
+Experiment B dev summaries were documented; the pre-written rule selects bge-large section-aware at Recall@5 0.7414.
+The completed bge-base section-aware test run is documented separately and is not the selected-model final result.
