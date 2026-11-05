@@ -69,3 +69,7 @@ Focused Experiment B tests passed (7) and Ruff passed; final test rerun remains 
 2026-11-05
 Experiment B dev summaries were documented; the pre-written rule selects bge-large section-aware at Recall@5 0.7414.
 The completed bge-base section-aware test run is documented separately and is not the selected-model final result.
+
+2026-11-05
+Experiment B selected-model final test completed for bge-large section-aware: 29/29 items, zero errors, zero missing.
+Final Recall@5 was 0.6552 with 95% bootstrap CI 0.4828–0.8276; results were documented without retuning.

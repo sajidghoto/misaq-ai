@@ -104,12 +104,16 @@ Peak RAM: **158530 bytes** (approximately 0.15 MiB as reported by the run)
 
 No test result may be used to change this rule or selection.
 
-## 6. Final test run record
+## 6. Final test run records
 
-The completed test run used `bge-base-en-v1.5` with `section_aware`, 29 queries,
-and completed with no errors or missing items. It is recorded as a separate
-test run because the pre-written selection rule selects `bge-large-en-v1.5`.
-It must not be presented as the final test result for the selected model.
+An earlier test run used `bge-base-en-v1.5` with `section_aware`. It completed
+with no errors or missing items, but it is not the selected-model final result.
+It is retained as a separate recorded run and must not be used to change the
+pre-written selection rule.
+
+The final selected configuration, `bge-large-en-v1.5` with `section_aware`, was
+then run once on the protected test split. It completed with 29 of 29 items,
+zero errors, and zero missing items.
 
 | Metric | Test result | 95% bootstrap CI |
 |---|---:|---|
@@ -127,6 +131,24 @@ Test status was complete: 29 of 29 items completed, zero errors, and zero
 missing items. Median latency was 143.38 ms and p95 latency was 206.56 ms.
 The reported peak memory field was 99945 bytes.
 
-To obtain a final test result for the selected configuration, run the protected
-test split once with `bge-large-en-v1.5` and `section_aware` after committing
-this documentation and ensuring a clean Git tree.
+### Selected-model final result
+
+| Metric | Test result | 95% bootstrap CI |
+|---|---:|---|
+| Recall@1 | 0.2759 | 0.1371–0.4483 |
+| Recall@3 | 0.5517 | 0.3793–0.7241 |
+| Recall@5 | 0.6552 | 0.4828–0.8276 |
+| Recall@10 | 0.7931 | 0.6207–0.9310 |
+| Precision@1 | 0.2759 | 0.1371–0.4483 |
+| Precision@3 | 0.1839 | 0.1264–0.2414 |
+| Precision@5 | 0.1310 | 0.0966–0.1655 |
+| Precision@10 | 0.0793 | 0.0621–0.0931 |
+| MRR | 0.4519 | 0.3142–0.5948 |
+
+Median latency was 334.55 ms and p95 latency was 512.42 ms. The reported peak
+memory field was 157819 bytes. Bootstrap used 10,000 resamples with seed
+`20261031`.
+
+The development and test sets each contain 29 queries, so the confidence
+intervals are wide. The test result is reported once and was not used for
+model or configuration selection.
