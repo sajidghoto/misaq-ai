@@ -41,3 +41,23 @@ class AuthError(BackendError):
 
 class ManifestError(MisaqError):
     pass
+
+
+class UnsupportedFileError(MisaqError):
+    pass
+
+
+class EmptyDocumentError(MisaqError):
+    pass
+
+
+class ScannedDocumentError(MisaqError):
+    pass
+
+
+class EncryptedDocumentError(MisaqError):
+    pass
+
+
+class CorruptFileError(MisaqError):
+    pass

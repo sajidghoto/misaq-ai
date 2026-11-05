@@ -17,3 +17,23 @@
 2026-11-03
 Housekeeping completed for deterministic verification, index selection, registry mapping, and retrieval demo.
 Protected data was not modified; validation commands were run after the changes.
+
+2026-11-05
+M1 ingestion design and schema compatibility review completed; no ingestion code written.
+Protected contract, processed-data, evaluation, and run artifacts were not modified.
+
+2026-11-05
+M1 Step B readers, normalization, synthetic tests, and limits documentation implemented.
+Full pytest and ruff passed; full mypy retains 22 pre-existing cloud backend errors.
+
+2026-11-05
+M1 Step C structure detection, sequence-aware clause trees, synthetic/property tests, and docs implemented.
+Full pytest and ruff passed; full mypy retains 22 pre-existing cloud backend errors.
+
+2026-11-05
+M1 Step C final verification completed: Ruff passed and pytest reported 206 passed.
+Full mypy retains the same 22 cloud-backend typing errors; google-genai is installed.
+
+2026-11-05
+M1 Step C completion tests added for labels, classifications, warnings, fallbacks, and coverage order.
+Full Ruff passed; pytest reported 211 passed; full mypy retains 22 pre-existing cloud-backend errors.

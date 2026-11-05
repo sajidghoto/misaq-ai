@@ -7,7 +7,7 @@ name = "misaq"
 version = "0.1.0"
 description = "Misaq AI: statute-grounded contract-clause analysis (Sukkur IBA FYP 23F-50)"
 requires-python = ">=3.10"
-dependencies = ["pymupdf>=1.24", "PyYAML>=6.0"]
+dependencies = ["pymupdf>=1.24", "PyYAML>=6.0", "python-docx>=1.1"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "ruff>=0.5", "mypy>=1.10", "hypothesis>=6"]
