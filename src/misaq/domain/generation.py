@@ -20,6 +20,14 @@ class Clause:
     licence: str = ""
     oracle_section_ids: tuple[str, ...] = ()
     contract: ContractMeta = ContractMeta()
+    heading: str | None = None
+    label: str | None = None
+    path: str = ""
+    parent_clause_id: str | None = None
+    source_pages: tuple[int, ...] = ()
+    kind: str = "operative_clause"
+    confidence: float = 1.0
+    warnings: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         if not self.clause_id or not self.text.strip():

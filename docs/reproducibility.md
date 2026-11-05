@@ -90,3 +90,33 @@ The script loads `MISAQ_GEMINI_API_KEY` from a repository-root `.env` file when 
 set in the process environment; `.env` is not committed.
 The real cloud run is **run by owner**. The proposal's `gemini-2.5-flash-lite` model string and
 provider SDK behavior are not verified in this environment.
+
+## M1 Step B ingestion validation
+```powershell
+python -m pytest -q tests\unit\test_ingestion_readers.py
+python -m ruff check src tests scripts
+python -m mypy src tests scripts
+python -m pytest
+```
+These commands exercise synthetic in-memory PDF/DOCX readers and the full
+regression suite. Reader tests must not create files in the repository or
+temporary directories and must not log document text.
+
+## M1 Step C structure validation
+```powershell
+python -m pytest -q tests\unit\test_ingestion_structure.py
+python -m ruff check src tests scripts
+python -m mypy src tests scripts
+python -m pytest
+```
+These commands validate deterministic structure detection using synthetic
+paragraphs only. Structure keywords and thresholds are loaded from
+`configs\ingestion.yaml`; held-out evaluation documents are not read.
+
+## M1 Step D ingestion and evaluation
+
+`scripts\08_ingest.py` prints counts, headings, and warnings by default. It writes clause text
+only when `--public` is explicitly supplied with `--show-text` or `--json-out`. The future
+Streamlit page must call `ingest_bytes` with bytes, bypass the replay cache, and set `cloud_ok`
+only after user consent. `scripts\09_eval_ingestion.py` validates gold manifests and requires
+`--final`, a clean tree, a listed hash, and a matching reader fingerprint for `test`.

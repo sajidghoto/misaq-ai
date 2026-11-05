@@ -134,6 +134,16 @@ def test_test_split_guard_refuses_unlisted_hash(tmp_path: Path, monkeypatch: pyt
         module.guard_test_split(tmp_path, eval_path, True)
 
 
+def test_listed_eval_hash_matches_fingerprint_digest(tmp_path: Path):
+    module = _script_module()
+    eval_path = tmp_path / "eval.jsonl"
+    eval_path.write_text("{}", encoding="utf-8")
+    digest = module.sha256_file(eval_path).sha256
+    (tmp_path / "SHA256SUMS").write_text(f"{digest}  eval.jsonl\n", encoding="utf-8")
+
+    assert module._listed_eval_hash(eval_path)
+
+
 def test_main_refuses_eval_validation_failure(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     module = _script_module()
     config_path = tmp_path / "config.yaml"

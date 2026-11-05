@@ -1,0 +1,33 @@
+{
+  "index_id": "d60113fbca586acc",
+  "backend": "faiss",
+  "statute_hashes": [
+    "930c60f67216530fab28f37d439ad3c3ae941dc918c914f2e7c18ddbabb7bfbd",
+    "ac89374529aa0d4929fa1feb5fefc6106c0513187dfde2d8b05ce9042e2a5fd8",
+    "46203a92b1ac847737643251cf10e8dbaea009be2b0cc991fac8716a3d7082a5"
+  ],
+  "chunking": {
+    "strategy": "fixed_size",
+    "max_tokens": 256,
+    "overlap_tokens": 32,
+    "reference_tokenizer": "BAAI/bge-small-en-v1.5",
+    "header_prefix": true,
+    "algorithm_version": "2"
+  },
+  "model": {
+    "hf_id": "BAAI/bge-large-en-v1.5",
+    "revision": "d4aa6901d3a41ba39fb536a557fa166f842b0e09",
+    "dimension": 1024,
+    "max_seq_length": 512,
+    "normalize": true,
+    "query_prefix": "Represent this sentence for searching relevant passages: ",
+    "document_prefix": "",
+    "pooling": "cls",
+    "trust_remote_code": false,
+    "batch_size": 4,
+    "device": "cpu"
+  },
+  "chunk_count": 427,
+  "excluded_repealed_count": 2,
+  "excluded_omitted_count": 83
+}

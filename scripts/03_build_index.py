@@ -1,4 +1,4 @@
-"""Build the configured bge-small section-aware index."""
+"""Build a configured section-aware index."""
 from __future__ import annotations
 
 import argparse
@@ -104,7 +104,16 @@ def main(model_name: str, chunking_name: str) -> int:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--model", choices=("bge-small-en-v1.5",), default="bge-small-en-v1.5")
+    parser.add_argument(
+        "--model",
+        choices=(
+            "bge-small-en-v1.5",
+            "bge-base-en-v1.5",
+            "bge-large-en-v1.5",
+            "all-MiniLM-L6-v2",
+        ),
+        default="bge-small-en-v1.5",
+    )
     parser.add_argument("--chunking", choices=("section_aware", "fixed_size"), default="section_aware")
     args = parser.parse_args()
     sys.exit(main(args.model, args.chunking))

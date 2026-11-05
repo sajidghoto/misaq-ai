@@ -57,16 +57,15 @@ class CloudBackend:
     def _generate_once(self, prompt: str, params: GenerationParams) -> BackendResponse:
         try:
             from google.genai import types
-            config_kwargs: dict[str, object] = {
-                "temperature": params.temperature, "top_p": params.top_p,
-                "max_output_tokens": params.max_output_tokens, "tools": [],
-            }
-            if params.seed is not None:
-                config_kwargs["seed"] = params.seed
             if params.structured:
-                config_kwargs.update({
-                    "response_mime_type": "application/json",
-                    "response_schema": {
+                config = types.GenerateContentConfig(
+                    temperature=params.temperature,
+                    top_p=params.top_p,
+                    max_output_tokens=params.max_output_tokens,
+                    seed=params.seed,
+                    tools=[],
+                    response_mime_type="application/json",
+                    response_schema={
                         "type": "OBJECT",
                         "properties": {
                             "claims": {"type": "ARRAY", "items": {"type": "OBJECT"}},
@@ -74,10 +73,18 @@ class CloudBackend:
                         },
                         "required": ["claims", "no_supported_provision"],
                     },
-                })
+                )
+            else:
+                config = types.GenerateContentConfig(
+                    temperature=params.temperature,
+                    top_p=params.top_p,
+                    max_output_tokens=params.max_output_tokens,
+                    seed=params.seed,
+                    tools=[],
+                )
             response = self.client.models.generate_content(
                 model=params.model, contents=prompt,
-                config=types.GenerateContentConfig(**config_kwargs),
+                config=config,
             )
             text = str(getattr(response, "text", "") or "")
             usage = getattr(response, "usage_metadata", None)

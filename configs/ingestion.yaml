@@ -1,0 +1,30 @@
+format:
+  allowed_extensions: [".pdf", ".docx"]
+  language: "en"
+heading_keywords:
+  agreement: ["agreement", "nda", "terms"]
+  schedule: ["schedule", "annexure", "annex", "appendix", "exhibit"]
+classification_keywords:
+  obligation: ["shall", "must", "will"]
+  prohibition: ["shall not", "may not", "prohibited"]
+  definition: ["means", "defined as", "definitions"]
+  preamble: ["whereas", "recital"]
+  signature: ["signature", "signed by"]
+  title: ["agreement", "memorandum", "contract"]
+  parties: ["parties", "between"]
+thresholds:
+  min_selectable_chars: 1
+  heading_confidence: 0.80
+  numbering_confidence: 0.80
+  max_query_tokens: 512
+  reference_tokenizer: "configs/pipeline.yaml#reference_tokenizer"
+analysis_units:
+  max_unit_tokens: 400
+  tiny_unit_tokens: 40
+structure:
+  false_label_starts: ["after", "before", "and", "or", "shall", "must", "may", "will", "is", "are", "applies", "be"]
+  heading_max_words: 12
+  heading_max_chars: 120
+  min_sequence_confidence: 0.60
+  layout_agreement_weight: 0.25
+  sequence_agreement_weight: 0.75
