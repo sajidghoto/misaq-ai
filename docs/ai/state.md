@@ -37,3 +37,27 @@ Full mypy retains the same 22 cloud-backend typing errors; google-genai is insta
 2026-11-05
 M1 Step C completion tests added for labels, classifications, warnings, fallbacks, and coverage order.
 Full Ruff passed; pytest reported 211 passed; full mypy retains 22 pre-existing cloud-backend errors.
+
+2026-11-05
+Cloud backend generation config now uses explicit google-genai constructor keywords for mypy-safe typing.
+Targeted mypy, Ruff, and generation tests passed; full mypy is blocked by a pre-existing syntax error in ingestion/units.py.
+
+2026-11-05
+M1 Step D ingestion units, memory-only public API, thin CLIs, evaluation metrics/validator, and synthetic tests implemented.
+Protected data and evaluation labels were not modified; full validation remains pending.
+
+2026-11-05
+Experiment B readiness review found the configured eval path and model CLI are incomplete.
+The supplied 29-row CSV is dev-only and requires approved JSONL conversion plus a separate test split.
+
+2026-11-05
+Extended the index-builder model CLI to accept all four configured embedding models.
+The default remains bge-small-en-v1.5; protected data and artifacts were not modified.
+
+2026-11-05
+Index build review found seven completed model/chunking combinations and one expected MiniLM section-aware failure.
+MiniLM's 256-token limit conflicts with the shared 400-token section-aware chunk budget; no settings were changed.
+
+2026-11-05
+Experiment B protocol documentation was added for model support, index-build evidence, dev runs, and selection.
+Metric and final-selection fields remain pending until the development summaries are reviewed.

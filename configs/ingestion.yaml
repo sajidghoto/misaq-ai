@@ -18,6 +18,9 @@ thresholds:
   numbering_confidence: 0.80
   max_query_tokens: 512
   reference_tokenizer: "configs/pipeline.yaml#reference_tokenizer"
+analysis_units:
+  max_unit_tokens: 400
+  tiny_unit_tokens: 40
 structure:
   false_label_starts: ["after", "before", "and", "or", "shall", "must", "may", "will", "is", "are", "applies", "be"]
   heading_max_words: 12

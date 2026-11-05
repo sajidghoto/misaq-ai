@@ -84,6 +84,10 @@ allowed. Error messages contain format/status only; diagnostics use counts, hash
 and indexes, never text. `cloud_ok` remains false until an explicit later policy
 decision.
 
+The future Streamlit page must pass uploaded bytes directly to `ingest_bytes`; it must not use
+the replay cache or write temporary files. It may set `cloud_ok=True` only after explicit user
+consent, outside this ingestion package.
+
 ## Evaluation, risks, and limits
 
 Use a document-level dev/test split; keep the held-out test set untouched during

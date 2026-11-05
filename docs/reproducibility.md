@@ -112,3 +112,11 @@ python -m pytest
 These commands validate deterministic structure detection using synthetic
 paragraphs only. Structure keywords and thresholds are loaded from
 `configs\ingestion.yaml`; held-out evaluation documents are not read.
+
+## M1 Step D ingestion and evaluation
+
+`scripts\08_ingest.py` prints counts, headings, and warnings by default. It writes clause text
+only when `--public` is explicitly supplied with `--show-text` or `--json-out`. The future
+Streamlit page must call `ingest_bytes` with bytes, bypass the replay cache, and set `cloud_ok`
+only after user consent. `scripts\09_eval_ingestion.py` validates gold manifests and requires
+`--final`, a clean tree, a listed hash, and a matching reader fingerprint for `test`.

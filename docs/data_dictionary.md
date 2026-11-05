@@ -119,3 +119,16 @@ Clause records contain `clause_id`, `text`, `cloud_ok`, `source`, `licence`, and
 Structured S2-S4 output is:
 `{"claims":[{"issue":string,"explanation":string,"citations":[string]}],"no_supported_provision":boolean}`.
 Parse failures remain items with `status="error"` and `error_type="OUTPUT_PARSE"`; raw output is kept.
+
+## Contract ingestion
+
+`Clause` records emitted by `ingest_bytes` retain text and deterministic provenance: heading,
+label, path, parent clause ID, source pages, kind, confidence, and warnings. Uploaded clauses
+always have `cloud_ok=false`. `IngestionReport` contains counts, detected numbering, confidence
+summary, and warnings only; it never contains document text. Ingestion units use the configured
+reference tokenizer and `analysis_units.max_unit_tokens` (400 by default).
+
+Ingestion gold is one JSONL row per paragraph with `role`, `level`, and `is_clause_start`, paired
+with a manifest containing contract identity, source/licence, file hash, split, and reader
+fingerprint. Bootstrap confidence intervals resample contracts, not paragraphs; the current
+evaluation sample is expected to be small.
