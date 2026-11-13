@@ -5,6 +5,7 @@ import hashlib
 import re
 from pathlib import Path
 
+from misaq.domain.enums import ActCode
 from misaq.domain.errors import DataValidationError
 from misaq.domain.ids import number_sort_key
 from misaq.domain.statute import ParseReport, ReviewItem
@@ -81,15 +82,44 @@ def check_source_hashes(raw_dir: Path) -> None:
 
 
 def check_processed_hashes(processed_dir: Path) -> None:
-    """Every processed statute must match processed_dir/SHA256SUMS."""
+    """Verify raw-byte SHA-256 digests for every processed statute."""
     sums = processed_dir / "SHA256SUMS"
     if not sums.exists():
         raise DataValidationError(f"missing {sums}")
+
+    expected_names = {f"{code.value}.json" for code in ActCode}
+    entries: dict[str, str] = {}
+    malformed: list[str] = []
+    for line_number, line in enumerate(sums.read_text(encoding="utf-8").splitlines(), 1):
+        digest, separator, name = line.partition("  ")
+        if not separator or not re.fullmatch(r"[0-9a-f]{64}", digest) or not name:
+            malformed.append(f"line {line_number}: expected '<sha256>  <statute>.json'")
+            continue
+        if name not in expected_names:
+            malformed.append(f"line {line_number}: unexpected statute entry {name!r}")
+            continue
+        if name in entries:
+            malformed.append(f"line {line_number}: duplicate statute entry {name!r}")
+            continue
+        entries[name] = digest
+
+    if malformed:
+        raise DataValidationError("invalid processed statute checksum manifest", failures=malformed)
+
+    missing_entries = sorted(expected_names - entries.keys())
+    if missing_entries:
+        raise DataValidationError(
+            "incomplete processed statute checksum manifest",
+            failures=[f"missing manifest entry: {name}" for name in missing_entries],
+        )
+
     bad = []
-    for line in sums.read_text(encoding="utf-8").splitlines():
-        digest, name = line.split(maxsplit=1)
-        p = processed_dir / name.strip().lstrip("*")
+    for name, digest in entries.items():
+        p = processed_dir / name
         if not p.exists() or sha256_file(p) != digest:
             bad.append(name)
     if bad:
-        raise DataValidationError("processed statute hash mismatch", failures=bad)
+        raise DataValidationError(
+            "processed statute hash mismatch (verify LF line endings and corpus provenance)",
+            failures=bad,
+        )

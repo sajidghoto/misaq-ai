@@ -11,8 +11,19 @@ Writes files: yes, the virtual environment. Deterministic: no, dependency ranges
 ```powershell
 .venv\Scripts\python.exe -c "from pathlib import Path; from misaq.validation.statutes import check_processed_hashes; check_processed_hashes(Path('data/processed/statutes')); print('processed statute hashes: OK')"
 ```
-Purpose: verify every frozen processed statute against `SHA256SUMS`. Writes files: no.
-Deterministic: yes.
+Purpose: verify every frozen processed statute against `SHA256SUMS` using the raw-byte
+SHA-256 contract established by `scripts/02_process_statutes.py`. `.gitattributes` forces
+LF checkouts for processed JSON and checksum-controlled evaluation JSONL on Windows,
+Linux, and macOS; PDFs remain binary. No local `core.autocrlf` setting is required.
+Attributes take effect on checkout and do not rewrite an existing worktree retroactively;
+use a fresh clone to verify this policy without manually editing protected inputs.
+Writes files: no. Deterministic: yes.
+
+If validation fails, inspect the named files and confirm that processed JSON has LF
+line endings. Do not rewrite `SHA256SUMS` to bypass a mismatch. A real content change
+requires explicit approval and preserved corpus provenance before the corpus or manifest
+is updated. The checker rejects malformed, duplicate, unexpected, or incomplete statute
+manifest entries.
 ## Index builds
 ```powershell
 .venv\Scripts\python.exe scripts\03_build_index.py --model bge-small-en-v1.5 --chunking section_aware
