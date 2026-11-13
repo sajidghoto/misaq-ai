@@ -1,0 +1,6 @@
+data/processed/statutes/*.json text eol=lf
+data/processed/statutes/SHA256SUMS text eol=lf
+data/eval/**/*.jsonl text eol=lf
+data/eval/**/SHA256SUMS text eol=lf
+data/raw/statutes/*.pdf binary
+data/raw/statutes/SHA256SUMS text eol=lf

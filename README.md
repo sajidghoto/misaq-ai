@@ -78,6 +78,22 @@ For the optional cloud generation backend:
 python -m pip install -e ".[cloud]"
 ```
 
+## Clone and line-ending policy
+
+Clone the repository normally; no local `core.autocrlf` setting is required:
+
+```powershell
+git clone https://github.com/sajidghoto/misaq-ai.git
+cd misaq-ai
+```
+
+On checkout, `.gitattributes` keeps processed statute JSON and checksum-controlled
+evaluation JSONL files as LF. Source PDFs are treated as binary. This matters because the
+manifests contain SHA-256 digests of the files' raw bytes, not normalized JSON semantics;
+the expected hashes therefore remain identical on Windows, Linux, and macOS. A pre-existing
+checkout is not rewritten retroactively when the policy is added; validate a fresh clone
+to apply the policy without manually editing protected inputs.
+
 ## First validation
 
 Confirm that the frozen processed statutes have not changed:
@@ -85,6 +101,12 @@ Confirm that the frozen processed statutes have not changed:
 ```powershell
 python -c "from pathlib import Path; from misaq.validation.statutes import check_processed_hashes; check_processed_hashes(Path('data/processed/statutes')); print('processed statute hashes: OK')"
 ```
+
+The checker verifies every statute listed by `ActCode` against the raw-byte digests in
+`data/processed/statutes/SHA256SUMS`. Do not edit the manifest to make a mismatch pass.
+Check the file's line endings and review the content diff against the trusted revision.
+If the legal content genuinely changed, stop and follow the project's approval and
+provenance process before changing the frozen corpus or its hashes.
 
 Run the non-slow test suite:
 

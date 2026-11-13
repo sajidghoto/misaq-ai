@@ -73,3 +73,7 @@ The completed bge-base section-aware test run is documented separately and is no
 2026-11-05
 Experiment B selected-model final test completed for bge-large section-aware: 29/29 items, zero errors, zero missing.
 Final Recall@5 was 0.6552 with 95% bootstrap CI 0.4828–0.8276; results were documented without retuning.
+
+2026-11-13
+Processed-statute validation now enforces the raw-byte checksum manifest and explicit LF checkout policy; hash-controlled evaluation JSONL and source PDFs have scoped Git attributes.
+All frozen statute hashes and protected data remained unchanged; 226 non-slow tests, Ruff, and mypy passed.
