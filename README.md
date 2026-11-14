@@ -126,6 +126,16 @@ python -m mypy src tests scripts
 Indexes are generated locally; only `index_meta.json` and `build_report.json` are tracked.
 Run the following reproduction steps in order from the repository root:
 
+Build every supported model/chunking combination in one pass:
+
+```powershell
+python scripts\03_build_index.py --all
+```
+
+This builds the seven supported combinations. The incompatible
+`all-MiniLM-L6-v2` + `section_aware` pair is reported and skipped. Index build
+reports may be updated, so review the Git diff after rebuilding.
+
 1. `python scripts\03_build_index.py --model bge-small-en-v1.5 --chunking fixed_size`
    Expected `index_id`: `e8bd74b651abb2f9`.
 2. `python scripts\03_build_index.py --model bge-small-en-v1.5 --chunking section_aware`
@@ -160,6 +170,20 @@ Index builds write files below `data/index`; vector payloads are local artifacts
 ## Running Experiment B
 
 Experiment B evaluates dense retrieval on the configured human-authored evaluation data:
+
+Run every supported combination on the development split and print a comparison table:
+
+```powershell
+python scripts\05_run_exp_b.py --all
+```
+
+`--all` is dev-only, runs the seven supported combinations sequentially, and prints the
+metrics, Recall@5 confidence interval, latency, peak memory, and a conclusion with the
+highest observed development Recall@5. It does not select a model or use the protected
+test split. A failed or incomplete combination is shown in the table and makes the command
+exit with a non-zero status.
+
+Run one model/chunking combination instead:
 
 ```powershell
 python scripts\05_run_exp_b.py `

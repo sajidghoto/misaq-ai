@@ -3,7 +3,9 @@ chunking: section_aware
 ks: [1, 3, 5, 10]
 top_n: 20
 split: test
-eval_file: data/eval/retrieval/test.jsonl
+eval_files:
+  dev: data/eval/retrieval/dev.jsonl
+  test: data/eval/retrieval/test.jsonl
 bootstrap:
   resamples: 10000
   seed: 20261031

@@ -2,7 +2,7 @@
 
 - Steps 1–4: implemented and validated in the repository.
 - Step 5: verification registry and reproducibility controls are implemented; approved corpus remains frozen.
-- Step 6: dense retrieval and Experiment B scaffolding exist; evaluation data does not exist yet.
+- Step 6: dense retrieval and Experiment B are implemented; dev and test evaluation files are present.
 - Step 7: Experiment C scaffolding and dry-run path exist; owner-run cloud validation remains pending.
 - Scope: dense-FAISS-only retrieval, as defined by the proposal; no sparse or hybrid path.
 - `selection.recall_at_5_tolerance`: null.
@@ -10,8 +10,8 @@
 - M1 is not built.
 - M5 scoring tools are not built.
 - M6 interface is not built.
-- `experimental_protocol.md` is not built.
-- No evaluation JSONL exists under `data/eval/` yet.
+- Experiment B protocol is documented in `docs/experimental_protocol.md`.
+- Experiment B supports explicit all-index and all-dev-evaluation runs.
 
 ## Session log
 2026-11-03
@@ -81,3 +81,11 @@ All frozen statute hashes and protected data remained unchanged; 226 non-slow te
 2026-11-13
 Index reproduction docs now list all tracked buildable combinations and their IDs; missing Experiment B index files report the exact build command.
 Ruff and mypy passed; pytest: 227 passed (one fitz deprecation warning); no real index builds ran and protected artifacts were untouched.
+
+2026-11-14
+Updated Experiment B configuration to map dev and test splits to their respective evaluation files.
+Focused runner tests and split-path checks passed; protected evaluation data and generated index/run artifacts were not modified.
+
+2026-11-14
+Added explicit --all modes for supported index builds and dev Experiment B sweeps with a comparison table and factual conclusion.
+Focused integration tests (16), Ruff, and mypy passed; no real index builds or Experiment B runs were executed.

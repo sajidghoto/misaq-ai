@@ -17,6 +17,7 @@ from misaq.domain.embedding import EmbeddingModelSpec
 from misaq.domain.enums import ActCode, SectionStatus
 from misaq.domain.statute import Act
 from misaq.embedding.sentence_transformer import SentenceTransformerEmbedder
+from misaq.experiments.configurations import EXP_B_COMBINATIONS
 from misaq.indexing.index import FaissIndex
 from misaq.validation.chunks import validate_chunks
 from misaq.validation.index import validate_index
@@ -102,8 +103,20 @@ def main(model_name: str, chunking_name: str) -> int:
     return 0
 
 
-if __name__ == "__main__":
+def run_all() -> int:
+    print(
+        "Skipping all-MiniLM-L6-v2 / section_aware: its 256-token limit is below "
+        "the section-aware chunk budget."
+    )
+    for model_name, chunking_name in EXP_B_COMBINATIONS:
+        print(f"\nBuilding {model_name} / {chunking_name}")
+        main(model_name, chunking_name)
+    return 0
+
+
+def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--all", action="store_true", help="build every supported model/chunking index")
     parser.add_argument(
         "--model",
         choices=(
@@ -112,8 +125,16 @@ if __name__ == "__main__":
             "bge-large-en-v1.5",
             "all-MiniLM-L6-v2",
         ),
-        default="bge-small-en-v1.5",
     )
-    parser.add_argument("--chunking", choices=("section_aware", "fixed_size"), default="section_aware")
-    args = parser.parse_args()
-    sys.exit(main(args.model, args.chunking))
+    parser.add_argument("--chunking", choices=("section_aware", "fixed_size"))
+    args = parser.parse_args(argv)
+    if args.all and (args.model is not None or args.chunking is not None):
+        parser.error("--all cannot be combined with --model or --chunking")
+    return args
+
+
+if __name__ == "__main__":
+    args = _parse_args()
+    if args.all:
+        sys.exit(run_all())
+    sys.exit(main(args.model or "bge-small-en-v1.5", args.chunking or "section_aware"))

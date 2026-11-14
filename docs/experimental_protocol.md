@@ -8,6 +8,9 @@ The retrieval evaluation uses the human-authored development file:
 data/eval/retrieval/dev.jsonl
 ```
 
+The Experiment B configuration maps each requested split to its corresponding evaluation file,
+so `--split dev` and `--split test` use separate inputs.
+
 The resolved Experiment B configuration is stored in
 `configs/experiments/exp_b_retrieval.yaml`. It reports Recall, Precision, and MRR at
 `k = 1, 3, 5, 10`, using 10,000 bootstrap resamples and seed `20261031`.
@@ -54,6 +57,28 @@ budget can produce 400-token chunks, while this model is configured for a
 silently changing the chunking configuration.
 
 ## 4. Step 9: development retrieval runs
+
+Build every supported index in one pass:
+
+```powershell
+python scripts\03_build_index.py --all
+```
+
+The command builds the seven supported combinations and explicitly skips the incompatible
+`all-MiniLM-L6-v2` + `section_aware` pair.
+
+Run every supported combination on dev and print a comparison table with the highest
+observed development Recall@5:
+
+```powershell
+python scripts\05_run_exp_b.py --all
+```
+
+This mode is dev-only. Its conclusion reports the highest observed result; it is not an
+automatic model selection and must not be interpreted as a test result. Incomplete or
+failed runs appear in the table and cause a non-zero exit status.
+
+Individual runs can also be started separately:
 
 Run one command for each successful combination:
 

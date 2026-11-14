@@ -66,6 +66,14 @@ def _script_module():
     return module
 
 
+def _build_script_module():
+    spec = importlib.util.spec_from_file_location("build_index", Path("scripts/03_build_index.py"))
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 def _retriever():
     spec = EmbeddingModelSpec("fake", "rev", 4, 32, True, "", "", "mean", False, 2)
     embedder = FakeEmbedder(spec)
@@ -122,6 +130,17 @@ def test_runner_normal_run_and_resume(tmp_path: Path):
     assert latency["p50"] is not None
     assert latency["p95"] is not None
     assert isinstance(first["peak_memory_bytes"], int)
+
+
+def test_runner_rejects_empty_split(tmp_path: Path):
+    eval_path = tmp_path / "eval.jsonl"
+    _write_eval(eval_path)
+    runner = ExperimentRunner(
+        _retriever(), eval_path, tmp_path / "run", {"ks": [1]}, split="test"
+    )
+
+    with pytest.raises(ValueError, match="no evaluation rows found for split 'test'"):
+        runner.run()
 
 
 def test_runner_records_error_and_continues(tmp_path: Path):
@@ -181,8 +200,9 @@ def test_main_refuses_eval_validation_failure(tmp_path: Path, monkeypatch: pytes
     config_path = tmp_path / "config.yaml"
     eval_path = tmp_path / "eval.jsonl"
     eval_path.write_text("{}", encoding="utf-8")
-    config_path.write_text("eval_file: eval.jsonl\n", encoding="utf-8")
+    config_path.write_text("eval_files:\n  dev: eval.jsonl\n", encoding="utf-8")
     monkeypatch.setattr(module, "CONFIG_PATH", config_path)
+    monkeypatch.setattr(module, "ROOT", tmp_path)
     monkeypatch.setattr(module, "_acts", lambda: ())
 
     def fail_validation(path, acts):
@@ -191,3 +211,131 @@ def test_main_refuses_eval_validation_failure(tmp_path: Path, monkeypatch: pytes
     monkeypatch.setattr(module, "validate_eval_jsonl", fail_validation)
     with pytest.raises(DataValidationError, match="synthetic validation failure"):
         module.main("fake", "section_aware", "dev", False)
+
+
+@pytest.mark.parametrize(
+    ("split", "expected_name"),
+    [("dev", "dev.jsonl"), ("test", "test.jsonl")],
+)
+def test_main_selects_eval_file_for_split(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, split: str, expected_name: str
+):
+    module = _script_module()
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        "eval_files:\n  dev: data/eval/retrieval/dev.jsonl\n"
+        "  test: data/eval/retrieval/test.jsonl\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(module, "CONFIG_PATH", config_path)
+    monkeypatch.setattr(module, "ROOT", tmp_path)
+    monkeypatch.setattr(module, "_acts", lambda: ())
+    monkeypatch.setattr(module, "guard_test_split", lambda *args: None)
+    validated_paths: list[Path] = []
+
+    def fail_validation(path: Path, acts):
+        validated_paths.append(path)
+        raise DataValidationError("stop after path selection")
+
+    monkeypatch.setattr(module, "validate_eval_jsonl", fail_validation)
+    with pytest.raises(DataValidationError, match="stop after path selection"):
+        module.main("fake", "section_aware", split, split == "test")
+
+    assert validated_paths == [tmp_path / "data" / "eval" / "retrieval" / expected_name]
+
+
+def test_build_index_all_runs_supported_combinations(monkeypatch: pytest.MonkeyPatch, capsys):
+    module = _build_script_module()
+    calls: list[tuple[str, str]] = []
+
+    def fake_main(model: str, chunking: str) -> int:
+        calls.append((model, chunking))
+        return 0
+
+    monkeypatch.setattr(module, "main", fake_main)
+
+    assert module.run_all() == 0
+    assert calls == list(module.EXP_B_COMBINATIONS)
+    assert ("all-MiniLM-L6-v2", "section_aware") not in calls
+    assert "Skipping all-MiniLM-L6-v2 / section_aware" in capsys.readouterr().out
+
+
+def test_all_cli_modes_reject_specific_model_or_chunking():
+    build_module = _build_script_module()
+    with pytest.raises(SystemExit):
+        build_module._parse_args(["--all", "--chunking", "fixed_size"])
+
+    exp_b_module = _script_module()
+    with pytest.raises(SystemExit):
+        exp_b_module._parse_args(["--all", "--model", "bge-small-en-v1.5"])
+
+
+def _complete_summary(recall_at_5: float) -> dict[str, object]:
+    metrics = {
+        "recall@1": 0.1,
+        "precision@1": 0.1,
+        "recall@3": 0.2,
+        "precision@3": 0.1,
+        "recall@5": recall_at_5,
+        "precision@5": 0.1,
+        "recall@10": 0.4,
+        "precision@10": 0.1,
+        "mrr": 0.2,
+    }
+    return {
+        "status": "complete",
+        "counts": {"expected": 29, "completed": 29, "errors": 0},
+        "metrics": metrics,
+        "confidence_intervals": {"recall@5": (0.4, 0.8)},
+        "latency_ms": {"p50": 10.0, "p95": 20.0},
+        "peak_memory_bytes": 1000,
+    }
+
+
+def test_exp_b_all_prints_table_and_dev_conclusion(monkeypatch: pytest.MonkeyPatch, capsys):
+    module = _script_module()
+    calls: list[tuple[str, str, str, bool]] = []
+
+    def fake_run_experiment(
+        model: str, chunking: str, split: str, final: bool, index_id: str | None = None
+    ) -> dict[str, object]:
+        calls.append((model, chunking, split, final))
+        recall = 0.75 if model == "bge-large-en-v1.5" else 0.65
+        return _complete_summary(recall)
+
+    monkeypatch.setattr(module, "run_experiment", fake_run_experiment)
+
+    assert module.run_all() == 0
+    output = capsys.readouterr().out
+    assert len(calls) == 7
+    assert all(split == "dev" and not final for _, _, split, final in calls)
+    assert "R@1" in output and "P@10" in output and "Peak RAM B" in output
+    assert "Highest dev Recall@5 is 0.7500" in output
+    assert "bge-large-en-v1.5 / section_aware" in output
+    assert "bge-large-en-v1.5 / fixed_size" in output
+    assert "not an automatic model selection" in output
+
+
+def test_exp_b_all_records_failed_combinations_and_returns_failure(
+    monkeypatch: pytest.MonkeyPatch, capsys
+):
+    module = _script_module()
+
+    def fail_one(model: str, chunking: str, split: str, final: bool, index_id=None):
+        if model == "bge-small-en-v1.5" and chunking == "section_aware":
+            raise RuntimeError("index unavailable")
+        return _complete_summary(0.65)
+
+    monkeypatch.setattr(module, "run_experiment", fail_one)
+
+    assert module.run_all() == 1
+    output = capsys.readouterr().out
+    assert "error" in output
+    assert "index unavailable" in output
+    assert "Sweep incomplete" in output
+
+
+def test_exp_b_all_rejects_protected_test_split():
+    module = _script_module()
+    with pytest.raises(SystemExit):
+        module._parse_args(["--all", "--split", "test"])
