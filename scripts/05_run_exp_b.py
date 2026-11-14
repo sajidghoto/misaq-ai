@@ -51,6 +51,13 @@ def _listed_eval_hash(eval_path: Path) -> bool:
     return expected.get(eval_path.name) == fingerprint.sha256
 
 
+def _eval_path(config: dict[str, object], split: str) -> Path:
+    eval_files = config.get("eval_files")
+    if not isinstance(eval_files, dict) or not isinstance(eval_files.get(split), str):
+        raise ValueError(f"no evaluation file configured for split {split!r}")
+    return ROOT / str(eval_files[split])
+
+
 def guard_test_split(root: Path, eval_path: Path, final: bool) -> None:
     if not final:
         raise RuntimeError("test split requires --final")
@@ -115,7 +122,7 @@ def main(model: str, chunking: str, split: str, final: bool, index_id: str | Non
     config["model"] = model
     config["chunking"] = chunking
     config["split"] = split
-    eval_path = ROOT / str(config["eval_file"])
+    eval_path = _eval_path(config, split)
     acts = _acts()
     validate_eval_jsonl(eval_path, acts)
     if split == "test":

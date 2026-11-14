@@ -94,6 +94,10 @@ class ExperimentRunner:
 
     def run(self, *, max_items: int | None = None) -> dict[str, object]:
         rows = [row for row in _read_rows(self.eval_path) if row.get("split") == self.split]
+        if not rows:
+            raise ValueError(
+                f"no evaluation rows found for split {self.split!r} in {self.eval_path}"
+            )
         completed_ids = {
             str(row["id"]) for row in (_read_rows(self.items_path) if self.items_path.exists() else [])
         }

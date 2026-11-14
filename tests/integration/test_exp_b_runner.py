@@ -124,6 +124,17 @@ def test_runner_normal_run_and_resume(tmp_path: Path):
     assert isinstance(first["peak_memory_bytes"], int)
 
 
+def test_runner_rejects_empty_split(tmp_path: Path):
+    eval_path = tmp_path / "eval.jsonl"
+    _write_eval(eval_path)
+    runner = ExperimentRunner(
+        _retriever(), eval_path, tmp_path / "run", {"ks": [1]}, split="test"
+    )
+
+    with pytest.raises(ValueError, match="no evaluation rows found for split 'test'"):
+        runner.run()
+
+
 def test_runner_records_error_and_continues(tmp_path: Path):
     eval_path = tmp_path / "eval.jsonl"
     _write_eval(eval_path)
@@ -181,8 +192,9 @@ def test_main_refuses_eval_validation_failure(tmp_path: Path, monkeypatch: pytes
     config_path = tmp_path / "config.yaml"
     eval_path = tmp_path / "eval.jsonl"
     eval_path.write_text("{}", encoding="utf-8")
-    config_path.write_text("eval_file: eval.jsonl\n", encoding="utf-8")
+    config_path.write_text("eval_files:\n  dev: eval.jsonl\n", encoding="utf-8")
     monkeypatch.setattr(module, "CONFIG_PATH", config_path)
+    monkeypatch.setattr(module, "ROOT", tmp_path)
     monkeypatch.setattr(module, "_acts", lambda: ())
 
     def fail_validation(path, acts):
@@ -191,3 +203,34 @@ def test_main_refuses_eval_validation_failure(tmp_path: Path, monkeypatch: pytes
     monkeypatch.setattr(module, "validate_eval_jsonl", fail_validation)
     with pytest.raises(DataValidationError, match="synthetic validation failure"):
         module.main("fake", "section_aware", "dev", False)
+
+
+@pytest.mark.parametrize(
+    ("split", "expected_name"),
+    [("dev", "dev.jsonl"), ("test", "test.jsonl")],
+)
+def test_main_selects_eval_file_for_split(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, split: str, expected_name: str
+):
+    module = _script_module()
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        "eval_files:\n  dev: data/eval/retrieval/dev.jsonl\n"
+        "  test: data/eval/retrieval/test.jsonl\n",
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(module, "CONFIG_PATH", config_path)
+    monkeypatch.setattr(module, "ROOT", tmp_path)
+    monkeypatch.setattr(module, "_acts", lambda: ())
+    monkeypatch.setattr(module, "guard_test_split", lambda *args: None)
+    validated_paths: list[Path] = []
+
+    def fail_validation(path: Path, acts):
+        validated_paths.append(path)
+        raise DataValidationError("stop after path selection")
+
+    monkeypatch.setattr(module, "validate_eval_jsonl", fail_validation)
+    with pytest.raises(DataValidationError, match="stop after path selection"):
+        module.main("fake", "section_aware", split, split == "test")
+
+    assert validated_paths == [tmp_path / "data" / "eval" / "retrieval" / expected_name]

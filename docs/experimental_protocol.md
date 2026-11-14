@@ -8,6 +8,9 @@ The retrieval evaluation uses the human-authored development file:
 data/eval/retrieval/dev.jsonl
 ```
 
+The Experiment B configuration maps each requested split to its corresponding evaluation file,
+so `--split dev` and `--split test` use separate inputs.
+
 The resolved Experiment B configuration is stored in
 `configs/experiments/exp_b_retrieval.yaml`. It reports Recall, Precision, and MRR at
 `k = 1, 3, 5, 10`, using 10,000 bootstrap resamples and seed `20261031`.
