@@ -26,12 +26,22 @@ is updated. The checker rejects malformed, duplicate, unexpected, or incomplete 
 manifest entries.
 ## Index builds
 ```powershell
-.venv\Scripts\python.exe scripts\03_build_index.py --model bge-small-en-v1.5 --chunking section_aware
 .venv\Scripts\python.exe scripts\03_build_index.py --model bge-small-en-v1.5 --chunking fixed_size
+.venv\Scripts\python.exe scripts\03_build_index.py --model bge-small-en-v1.5 --chunking section_aware
+.venv\Scripts\python.exe scripts\03_build_index.py --model bge-base-en-v1.5 --chunking fixed_size
+.venv\Scripts\python.exe scripts\03_build_index.py --model bge-base-en-v1.5 --chunking section_aware
+.venv\Scripts\python.exe scripts\03_build_index.py --model bge-large-en-v1.5 --chunking fixed_size
+.venv\Scripts\python.exe scripts\03_build_index.py --model bge-large-en-v1.5 --chunking section_aware
+.venv\Scripts\python.exe scripts\03_build_index.py --model all-MiniLM-L6-v2 --chunking fixed_size
 ```
-Purpose: build and self-validate both configured chunking indexes. Writes files: yes, under
-`data/index`. Deterministic: index contents are deterministic for the frozen inputs/model;
-timing and peak-memory fields in build reports are not.
+Purpose: build and self-validate each tracked buildable model/chunking combination. Writes
+files: yes, under `data/index`; only `index_meta.json` and `build_report.json` are tracked.
+Expected index IDs in command order are `e8bd74b651abb2f9`, `a9c430c672eaac3a`,
+`9e5afae9a3dac0ba`, `6de409c1f5c1273c`, `d60113fbca586acc`, `b3034f148b0d5021`,
+and `37be8681be8ffd64`. A matching ID confirms the same configuration. The
+`all-MiniLM-L6-v2` + `section_aware` combination is not buildable because its 256-token
+limit is below the section-aware chunking budget. Rebuilt vectors may differ numerically
+across machines; timing and peak-memory fields in build reports also vary.
 ## Validation
 ```powershell
 .venv\Scripts\python.exe -m pytest -q tests/unit/test_validate_processed.py tests/unit/test_validate_statutes.py tests/unit/test_validation_chunks.py tests/unit/test_index.py

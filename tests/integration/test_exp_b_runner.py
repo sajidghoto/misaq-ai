@@ -7,7 +7,7 @@ import pytest
 
 from misaq.domain.chunking import Chunk, ChunkingSpec
 from misaq.domain.embedding import EmbeddingModelSpec
-from misaq.domain.errors import DataValidationError
+from misaq.domain.errors import DataValidationError, IndexFilesMissingError
 from misaq.domain.retrieval import Query
 from misaq.embedding.fake import FakeEmbedder
 from misaq.experiments.runner import ExperimentRunner
@@ -24,6 +24,38 @@ def test_test_split_guard_requires_final(tmp_path: Path):
         assert str(error) == "test split requires --final"
     else:
         raise AssertionError("test split guard did not refuse")
+
+
+def test_find_index_missing_files_includes_build_command(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+):
+    module = _script_module()
+    monkeypatch.setattr(module, "ROOT", tmp_path)
+    pipeline_path = tmp_path / "configs" / "pipeline.yaml"
+    pipeline_path.parent.mkdir(parents=True)
+    pipeline_path.write_text(
+        "models:\n  bge-small-en-v1.5:\n    hf_id: BAAI/bge-small-en-v1.5\n",
+        encoding="utf-8",
+    )
+    index_dir = tmp_path / "data" / "index" / "test-index"
+    index_dir.mkdir(parents=True)
+    (index_dir / "index_meta.json").write_text(
+        json.dumps({
+            "model": {"hf_id": "BAAI/bge-small-en-v1.5"},
+            "chunking": {"strategy": "section_aware"},
+        }),
+        encoding="utf-8",
+    )
+
+    with pytest.raises(IndexFilesMissingError) as error:
+        module._find_index("bge-small-en-v1.5", "section_aware")
+
+    assert str(error.value) == (
+        "index files are missing (chunks.jsonl, faiss.bin) for "
+        "model=bge-small-en-v1.5, chunking=section_aware; build with: "
+        "python scripts\\03_build_index.py --model bge-small-en-v1.5 "
+        "--chunking section_aware"
+    )
 
 
 def _script_module():

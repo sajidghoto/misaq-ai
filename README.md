@@ -121,20 +121,41 @@ python -m ruff check src tests scripts
 python -m mypy src tests scripts
 ```
 
-The cloud backend currently has known mypy issues; runtime tests and Ruff remain the
-first quick validation gates.
-
 ## Building indexes
 
-The repository includes built indexes for the frozen corpus. Rebuild an index only when
-you intentionally need a new model or chunking configuration:
+Indexes are generated locally; only `index_meta.json` and `build_report.json` are tracked.
+Run the following reproduction steps in order from the repository root:
+
+1. `python scripts\03_build_index.py --model bge-small-en-v1.5 --chunking fixed_size`
+   Expected `index_id`: `e8bd74b651abb2f9`.
+2. `python scripts\03_build_index.py --model bge-small-en-v1.5 --chunking section_aware`
+   Expected `index_id`: `a9c430c672eaac3a`.
+3. `python scripts\03_build_index.py --model bge-base-en-v1.5 --chunking fixed_size`
+   Expected `index_id`: `9e5afae9a3dac0ba`.
+4. `python scripts\03_build_index.py --model bge-base-en-v1.5 --chunking section_aware`
+   Expected `index_id`: `6de409c1f5c1273c`.
+5. `python scripts\03_build_index.py --model bge-large-en-v1.5 --chunking fixed_size`
+   Expected `index_id`: `d60113fbca586acc`.
+6. `python scripts\03_build_index.py --model bge-large-en-v1.5 --chunking section_aware`
+   Expected `index_id`: `b3034f148b0d5021`.
+7. `python scripts\03_build_index.py --model all-MiniLM-L6-v2 --chunking fixed_size`
+   Expected `index_id`: `37be8681be8ffd64`.
+
+A matching ID after rebuilding confirms the same configuration. The
+`all-MiniLM-L6-v2` + `section_aware` combination is not buildable because its 256-token
+limit is below the section-aware chunking budget.
+
+Rebuilt vectors may differ numerically across machines, even when the `index_id` matches.
+After rebuilding the indexes, run Experiment B:
 
 ```powershell
-python scripts\03_build_index.py --model bge-small-en-v1.5 --chunking section_aware
-python scripts\03_build_index.py --model bge-small-en-v1.5 --chunking fixed_size
+python scripts\05_run_exp_b.py `
+  --model bge-small-en-v1.5 `
+  --chunking section_aware `
+  --split dev
 ```
 
-Index builds write artifacts below `data/index`.
+Index builds write files below `data/index`; vector payloads are local artifacts.
 
 ## Running Experiment B
 

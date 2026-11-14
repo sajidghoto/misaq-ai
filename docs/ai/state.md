@@ -77,3 +77,7 @@ Final Recall@5 was 0.6552 with 95% bootstrap CI 0.4828–0.8276; results were do
 2026-11-13
 Processed-statute validation now enforces the raw-byte checksum manifest and explicit LF checkout policy; hash-controlled evaluation JSONL and source PDFs have scoped Git attributes.
 All frozen statute hashes and protected data remained unchanged; 226 non-slow tests, Ruff, and mypy passed.
+
+2026-11-13
+Index reproduction docs now list all tracked buildable combinations and their IDs; missing Experiment B index files report the exact build command.
+Ruff and mypy passed; pytest: 227 passed (one fitz deprecation warning); no real index builds ran and protected artifacts were untouched.

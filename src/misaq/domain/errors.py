@@ -19,6 +19,10 @@ class RetrievalError(MisaqError):
     pass
 
 
+class IndexFilesMissingError(MisaqError):
+    pass
+
+
 class BackendError(MisaqError):
     retryable = False
 

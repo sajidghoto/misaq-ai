@@ -10,7 +10,7 @@ from pathlib import Path
 import yaml
 
 from misaq.domain.embedding import EmbeddingModelSpec
-from misaq.domain.errors import DataValidationError
+from misaq.domain.errors import DataValidationError, IndexFilesMissingError, MisaqError
 from misaq.domain.statute import Act
 from misaq.embedding.sentence_transformer import SentenceTransformerEmbedder
 from misaq.experiments.fingerprint import git_info, sha256_file
@@ -22,6 +22,13 @@ from misaq.validation.statutes import check_processed_hashes
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "configs/experiments/exp_b_retrieval.yaml"
+
+
+def _build_index_command(model_name: str, chunking_name: str) -> str:
+    return (
+        f"python scripts\\03_build_index.py --model {model_name} "
+        f"--chunking {chunking_name}"
+    )
 
 
 def _acts() -> tuple[Act, ...]:
@@ -64,7 +71,9 @@ def _find_index(model_name: str, chunking_name: str, index_id: str | None = None
     pipeline = yaml.safe_load((ROOT / "configs/pipeline.yaml").read_text(encoding="utf-8"))
     model_id = pipeline["models"][model_name]["hf_id"]
     matches: list[Path] = []
-    for directory in sorted((ROOT / "data/index").iterdir()):
+    index_root = ROOT / "data/index"
+    directories = sorted(index_root.iterdir()) if index_root.is_dir() else []
+    for directory in directories:
         if not directory.is_dir() or not (directory / "index_meta.json").exists():
             continue
         meta = json.loads((directory / "index_meta.json").read_text(encoding="utf-8"))
@@ -75,6 +84,17 @@ def _find_index(model_name: str, chunking_name: str, index_id: str | None = None
         ):
             matches.append(directory)
     if len(matches) == 1:
+        missing_files = [
+            filename for filename in ("chunks.jsonl", "faiss.bin")
+            if not (matches[0] / filename).is_file()
+        ]
+        if missing_files:
+            command = _build_index_command(model_name, chunking_name)
+            missing = ", ".join(missing_files)
+            raise IndexFilesMissingError(
+                f"index files are missing ({missing}) for model={model_name}, "
+                f"chunking={chunking_name}; build with: {command}"
+            )
         return FaissIndex.load(matches[0])
     if len(matches) > 1:
         ids = ", ".join(path.name for path in matches)
@@ -83,7 +103,11 @@ def _find_index(model_name: str, chunking_name: str, index_id: str | None = None
             "use --index-id"
         )
     suffix = f", index_id={index_id}" if index_id is not None else ""
-    raise RuntimeError(f"no built index for model={model_name}, chunking={chunking_name}{suffix}")
+    command = _build_index_command(model_name, chunking_name)
+    raise IndexFilesMissingError(
+        f"no built index for model={model_name}, chunking={chunking_name}{suffix}; "
+        f"build with: {command}"
+    )
 
 
 def main(model: str, chunking: str, split: str, final: bool, index_id: str | None = None) -> int:
@@ -117,6 +141,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     try:
         sys.exit(main(args.model, args.chunking, args.split, args.final, args.index_id))
-    except (OSError, RuntimeError, ValueError) as error:
+    except (MisaqError, OSError, RuntimeError, ValueError) as error:
         print(str(error), file=sys.stderr)
         sys.exit(1)
