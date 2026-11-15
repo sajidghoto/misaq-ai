@@ -156,14 +156,7 @@ A matching ID after rebuilding confirms the same configuration. The
 limit is below the section-aware chunking budget.
 
 Rebuilt vectors may differ numerically across machines, even when the `index_id` matches.
-After rebuilding the indexes, run Experiment B:
-
-```powershell
-python scripts\05_run_exp_b.py `
-  --model bge-small-en-v1.5 `
-  --chunking section_aware `
-  --split dev
-```
+After rebuilding the indexes, run Experiment B
 
 Index builds write files below `data/index`; vector payloads are local artifacts.
 
